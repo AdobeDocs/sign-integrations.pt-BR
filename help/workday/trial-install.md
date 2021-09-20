@@ -12,10 +12,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '998'
+ht-degree: 40%
 
 ---
 
@@ -163,6 +163,6 @@ Os clientes do Adobe Sign devem entrar em contato com o Gerenciador de sucesso d
 
 * [Adicionar tags de texto da Adobe aos documentos](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [Configuração da revisão de documentos e exemplos](https://experienceleague.adobe.com/docs/dc-sign-integrations/using/workday/quick-start.html)
+* [Configuração da revisão de documentos e exemplos](https://www.adobe.com/go/adobesign_workday_quick_start)
 
 [**Entrar em contato com o Suporte do Adobe Sign**](https://adobe.com/go/adobesign-support-center_br)
