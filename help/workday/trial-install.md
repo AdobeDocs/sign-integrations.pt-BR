@@ -12,9 +12,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '995'
 ht-degree: 40%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 40%
 
 ## Visão geral {#overview}
 
-Este documento foi desenvolvido para ajudar [!DNL Workday] os clientes a aprenderem como ativar uma conta de avaliação com a Adobe Sign e depois integrá-la ao inquilino [!DNL Workday]. Para usar o Adobe Sign em [!DNL Workday], você precisa saber como criar e modificar [!DNL Workday] itens como:
+Este documento foi desenvolvido para ajudar [!DNL Workday] os clientes a aprenderem como ativar uma conta de avaliação com a Adobe Sign e depois integrá-la ao inquilino [!DNL Workday]. Para usar o Adobe Sign em [!DNL Workday], você deve saber como criar e modificar [!DNL Workday] itens como:
 
 * Estrutura do processo comercial
 * Configuração e configuração do inquilino
@@ -39,9 +39,9 @@ As etapas de alto nível para concluir a integração são:
 
 ## Ative sua conta de avaliação da Adobe Sign {#activate-sign-trial-account}
 
-Para solicitar uma avaliação de 30 dias da Adobe Sign, você precisa preencher este [formulário de registro](https://land.echosign.com/esign-trial-workday-registration.html).
+Para solicitar uma avaliação de 30 dias da Adobe Sign, você deve preencher este [formulário de registro](https://land.echosign.com/esign-trial-workday-registration.html).
 
-**Nota**: Recomendamos que você use um endereço de email funcional válido para criar a versão de avaliação e não um email temporário. Você precisa acessar este email para verificar a conta, portanto o endereço deve ser válido.
+**Nota**: Recomendamos que você use um endereço de email funcional válido para criar a versão de avaliação e não um email temporário. Você deve acessar este email para verificar a conta, portanto, o endereço deve ser válido.
 
 ![O formulário de solicitação de avaliação](images/trial-land.png)
 
@@ -49,13 +49,13 @@ Dentro de um dia útil, um especialista de integração da Adobe Sign fornece su
 
 ![O email de Boas-vindas do Adobe Sign](images/welcome-email-2020.png)
 
-Siga as instruções no email para inicializar sua conta e acessar a página do Adobe Sign [!UICONTROL Home].
+Para inicializar sua conta e acessar sua página do Adobe Sign [!UICONTROL Home], siga as instruções no email .
 
 ![O painel da Adobe Sign](images/classic-home.png)
 
 ## Gerar uma chave de integração {#generate-an-integration-key}
 
-Para novas instalações, você precisa gerar uma chave de integração no Adobe Sign e inseri-la em [!DNL Workday]. Essa chave autentica os ambientes Adobe Sign e [!DNL Workday] para confiar um no outro e compartilhar conteúdo.
+Para novas instalações, você deve gerar uma chave de integração no Adobe Sign e inseri-la em [!DNL Workday]. Essa chave autentica os ambientes Adobe Sign e [!DNL Workday] para confiar um no outro e compartilhar conteúdo.
 
 Para gerar uma Chave de integração no Adobe Sign:
 
@@ -165,4 +165,4 @@ Os clientes do Adobe Sign devem entrar em contato com o Gerenciador de sucesso d
 
 * [Revise a configuração do documento e exemplos](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}
 
-[**Entrar em contato com o Suporte do Adobe Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entrar em contato com o Suporte do Adobe Sign**](https://www.adobe.com/go/adobesign-support-center)
