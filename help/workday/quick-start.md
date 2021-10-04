@@ -11,32 +11,32 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: 5ac9dc27dcdb6cab19281e6aafd4ea0524cc01d6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1348'
+ht-degree: 31%
 
 ---
 
 # [!DNL Workday] Guia de início rápido{#workday-quick-start-guide}
 
-[**Entrar em contato com o Suporte do Adobe Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entrar em contato com o Suporte do Adobe Sign**](https://www.adobe.com/go/adobesign-support-center)
 
 ## Visão geral {#overview}
 
 Este documento foi desenvolvido para ajudar [!DNL Workday] os administradores a entender como personalizar os [!DNL Workday] Processos corporativos para incluir a Adobe Sign para obter assinaturas eletrônicas. Para usar o Adobe Sign em [!DNL Workday], você deve saber como criar e modificar [!DNL Workday] itens como:
 
-* Estrutura do processo de negócios
+* [!UICONTROL Estrutura do processo de negócios]
 * Configuração e configuração do inquilino
 * Integração com o Reporting and [!DNL Workday] Studio
 
 ## Acesso ao Adobe Sign diretamente do [!DNL Workday] {#access-adobe-sign}
 
-O recurso de assinatura eletrônica da Adobe Sign é exibido como uma ação [!UICONTROL Revisar etapa do documento] no Business Process Framework (BPF) e como uma tarefa Distribuir documentos.
+[!UICONTROL O ] recurso de assinatura eletrônica da Adobe Sign é exibido como  [!UICONTROL Review Document ] Stepaction no  [!UICONTROL Business Process Framework (BPF) ] e como uma tarefa Distribute Documents.
 
 ## [!UICONTROL Etapa de Review Document (Revisão de documento)] {#review-document-step}
 
-A Adobe Sign para [!DNL Workday] é exposta pela [!UICONTROL Etapa de revisão do documento] que você pode adicionar a qualquer um dos mais de 400 processos corporativos em [!DNL Workday], incluindo Oferta, Distribuir documentos e tarefas, Propor compensação e muito mais.
+A Adobe Sign para [!DNL Workday] é exposta pela [!UICONTROL Etapa de Revisão de Documento] que você pode adicionar a qualquer um dos mais de 400 Processos de Negócios em [!DNL Workday], incluindo [!UICONTROL Oferta], [!UICONTROL Distribuir Documentos e Tarefas], [!UICONTROL Propor Compensação] e muito mais.
 
 Você pode consultar os [[!DNL Workday] artigos da comunidade em [!UICONTROL Etapa de revisão do documento]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
 
@@ -62,7 +62,7 @@ Para configurar a [!UICONTROL Etapa de Revisão do Documento]:
    * Depois que uma única pessoa da função assina, a etapa da linha é concluída e o documento continua para a próxima etapa de linha.
    * Quando todas as linhas tiverem sido assinadas, a [!UICONTROL Etapa de revisão do documento] estará concluída.
 
-1. Especifique o documento que será assinado. Se for um BP de Offer (oferta), você pode utilizar o documento da etapa Generate Document (Gerar documento). Caso contrário, escolha um documento ou relatório já existente.
+1. Especifique o documento que será assinado. Se o documento for uma [!UICONTROL Offer BP], você pode usá-lo de uma etapa Gerar documento. Caso contrário, escolha um documento ou relatório já existente.
 
 1. Repita a etapa 3 para os documentos necessários.
 
@@ -78,7 +78,7 @@ No menu de ações relacionadas de uma [!UICONTROL Etapa de Revisão de Document
 
 ## Notas de etapa do processo comercial {#business-process-step-notes}
 
-O Business Process Framework é poderoso; no entanto, você deve garantir que:
+[!UICONTROL O ] Enquadramento do processo de negócios é poderoso; no entanto, você deve garantir que:
 
 * Cada Processo de Negócios deve ter uma etapa de conclusão, que é ideal no final do processo de negócios.
 
@@ -90,7 +90,7 @@ O Business Process Framework é poderoso; no entanto, você deve garantir que:
 
 ### Exemplo: oferta {#example-offer}
 
-O BP da oferta é um subprocesso do BP dinâmico do aplicativo de trabalho que precisa ser configurado para executar o BP da oferta. É acionado quando o estado Candidatura a emprego é movido de “Offer” (Oferta) ou “Make Offer” (Fazer oferta).
+O BP da oferta é um subprocesso do [!UICONTROL Job Application Dynamic BP] que deve ser configurado para executar o BP da oferta. É acionado quando o estado da Aplicação de Trabalho é movido para &quot;[!UICONTROL Offer]&quot; ou &quot;[!UICONTROL Make Offer]&quot;.
 
 No exemplo abaixo, uma [!UICONTROL Etapa de revisão do documento] está usando uma etapa de Documento dinâmico para a América do Norte e o Japão.
 
@@ -120,7 +120,7 @@ Os itens entre {{chaves}} são [Tags de texto da Adobe](https://adobe.com/go/ado
 
 Na [!UICONTROL Etapa de revisão do documento], o documento dinâmico é referenciado da etapa anterior e define o processo de assinatura sequencial por meio de dois grupos de assinatura.
 
-O comportamento ilustrado abaixo encaminhará o documento gerado dinamicamente primeiro para o Gerente de contratação e, em seguida, para o Candidato.
+O comportamento ilustrado abaixo encaminha o documento gerado dinamicamente primeiro para o Gerente de contratação e, em seguida, para o Candidato.
 
 ![[!DNL Workday] grupos de assinatura definidos](images/configure-rd-stepsmaller-575.png)
 
@@ -128,7 +128,7 @@ O comportamento ilustrado abaixo encaminhará o documento gerado dinamicamente p
 
 Introduzida em [!DNL Workday] 30, a tarefa Distribuir Documentos ou Tarefas em Massa pode ser usada para enviar um único documento para um grande grupo (&lt;20K) de signatários individuais. É limitado a uma só assinatura por documento. A criação de uma distribuição é executada acessando a ação ‘[!UICONTROL Criar Distribuir Documentos ou Tarefas]’ na barra de pesquisa.
 
-Exemplo: Enviar um formulário de escolha de equidade de funcionário a todos os gerentes com Global Modern Services. Você pode filtrá-lo ainda mais para gerentes individuais, se desejar.
+Exemplo: Envie um formulário de escolha de equidade de funcionário para todos os gerentes com [!UICONTROL Serviços Modernos Globais]. Você pode filtrá-lo ainda mais para gerentes individuais, se desejar.
 
 Você também pode acessar o relatório **Exibir Distribuir Documentos ou Tarefas** para acompanhar o progresso da distribuição.
 
@@ -158,7 +158,7 @@ O ciclo de assinatura [!DNL Workday] suprime todas as notificações por email d
 
 Uma vez que um documento é assinado por todos os grupos de assinatura, uma cópia do documento assinado é distribuída para todos os membros do grupo de assinatura por email.
 
-Para suprimir esse comportamento, você pode entrar em contato com seu Gerente de sucesso da Adobe Sign ou com a [equipe de suporte da Adobe Sign](https://adobe.com/go/adobesign-support-center).
+Para suprimir esse comportamento, você pode entrar em contato com seu [!UICONTROL Gerente de sucesso da Adobe Sign] ou com a [equipe de suporte da Adobe Sign](https://adobe.com/go/adobesign-support-center).
 
 Em [!DNL Workday], você pode acessar os documentos assinados no registro completo do processo. Você pode encontrar:
 
@@ -186,9 +186,9 @@ A comunidade [!DNL Workday] tem vários bons artigos sobre como solucionar probl
 
 O Adobe Sign é o parceiro da integração e deve ser contatado em caso de falha da integração ao obter assinaturas, ou em caso de falha de notificação de assinaturas pendentes.
 
-Os clientes do Adobe Sign devem entrar em contato com o Gerenciador de sucesso do cliente (CSM) para obter suporte. Como alternativa, o Suporte técnico da Adobe pode ser contatado por telefone: 1-866-318-4100. Aguarde a lista de produtos e digite: 4, em seguida, 2 (como solicitado).
+Os clientes da Adobe Sign devem entrar em contato com o Gerente de sucesso do cliente para obter suporte. Como alternativa, [!UICONTROL Suporte Técnico de Adobe] pode ser acessado por telefone: 1-866-318-4100, aguarde a lista de produtos e insira: 4 e 2 (conforme solicitado).
 
-* [Adicionar tags de texto da Adobe aos documentos](https://adobe.com/go/adobesign_text_tag_guide)
+* [Adicionar tags de texto da Adobe aos documentos](https://www.adobe.com/go/adobesign_text_tag_guide)
 
 <!--
 [Download PDF](images/adobe-sign-for-workday-quick-start-guide-2016.pdf)
