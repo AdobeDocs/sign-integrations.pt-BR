@@ -7,9 +7,9 @@ type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 40fe3649aab0499ce8e5fbd1b11308ffbd759a44
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2354'
 ht-degree: 1%
 
 ---
@@ -247,6 +247,10 @@ Nota: Se um [!DNL EchoSign] Contrato for enviado para assinatura e o registro fo
 O subpainel [!UICONTROL Eventos] de um [!DNL EchoSign] Contrato controla o status dos contratos enviados para assinatura. Para ver as atualizações mais recentes em um [!DNL EchoSign] Contrato, selecione **[!UICONTROL Atualizar status]**. O botão [!UICONTROL Atualizar status] está disponível somente depois que um contrato é enviado para assinatura.
 
 ![Imagem](images/update-cancel-status.png)
+
+Depois que um contrato é enviado para uma assinatura, selecione **[!UICONTROL Atualizar status]** para recuperar o status mais recente.
+
+![Imagem](images/events-subpanel.png)
 
 ### Enviar lembretes {#send-reminders}
 
