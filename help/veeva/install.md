@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8071d9aa23351e31a9360d3c4d17f6297d0e2f1
+source-git-commit: 45bc2d698396bb07c4a246930d34b7e2ad0f6648
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3113'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ As etapas de alto nível para concluir a integração são:
 
 ## Configure [!DNL Veeva Vault]
 
-Para configurar [!DNL Veeva Vault] para integração com o Adobe Sign, criamos determinados objetos que ajudam a controlar o histórico de um ciclo de vida do contrato no Vault. Os administradores devem criar os seguintes objetos:
+Para configurar [!DNL Veeva Vault] para integração com o Adobe Sign, crie determinados objetos que ajudam a controlar o histórico de um ciclo de vida do contrato no Vault. Os administradores devem criar os seguintes objetos:
 
 * Assinatura
 * Signatário
@@ -223,7 +223,7 @@ Quando um documento do Vault é enviado à Adobe Sign, seu estado deve correspon
 
    ![Imagem do estado do ciclo de vida 1](images/lifecycle-state1.png)
 
-* **No Adobe Sign Draft**: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está em um estado RASCUNHO. É um estado obrigatório. Esse estado deve indicar as seguintes cinco ações do usuário:
+* **No Adobe Sign Draft**: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está em um estado RASCUNHO. É um estado obrigatório. Esse estado deve definir as seguintes cinco ações do usuário:
 
    * Ação que altera o estado do documento para *No estado Criação do Adobe Sign*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que altera o estado do documento para *No estado de Assinatura do Adobe*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
