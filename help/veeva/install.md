@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: a262c45fa21bf5d7d0536588d2a621c50d1e8fa0
+source-git-commit: b6925abdeb7912ae17161663a86637d9913de1ec
 workflow-type: tm+mt
-source-wordcount: '3090'
+source-wordcount: '3089'
 ht-degree: 2%
 
 ---
@@ -168,7 +168,7 @@ Os administradores devem adicionar o campo compartilhado existente *Desativar so
 
 ## Criar representações de documentos {#create-renditions}
 
-Os administradores devem criar um novo tipo de representação chamado *Adobe Sign Rendition (adobe_sign_rendition__c)*, que é usado pela integração do Vault para carregar documentos PDF assinados no Adobe Sign. A representação Adobe Sign deve ser declarada para cada tipo de documento elegível para a Assinatura de Adobe.
+Os administradores devem criar um novo tipo de representação chamado *Adobe Sign Rendition (adobe_sign_rendition__c)*, que é usado pela integração do Vault para carregar documentos de PDF assinados no Adobe Sign. A representação Adobe Sign deve ser declarada para cada tipo de documento elegível para a Assinatura de Adobe.
 
 ![Imagem de tipos de representação](images/rendition-type.png)
 
