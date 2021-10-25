@@ -28,6 +28,6 @@ ht-degree: 27%
 + Adobe Sign para NetSuite {#netsuite}
    + [Notas de versão do Adobe Sign for NetSuite](netsuite/release-notes.md)
    + [Guia de instalação do Adobe Sign for NetSuite](netsuite/install.md)
-+ Adobe Sign para SugarCrm {#sugarcrm}
++ Adobe Sign for SugarCrm {#sugarcrm}
    + [Manual de instalação](sugarcrm/install.md)
 
