@@ -10,7 +10,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 45bc2d698396bb07c4a246930d34b7e2ad0f6648
+source-git-commit: 1c95f3eb0ddb077cad53a82b1a56358637839b16
 workflow-type: tm+mt
 source-wordcount: '3113'
 ht-degree: 2%
@@ -23,14 +23,14 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Este documento explica como estabelecer a integração do Adobe Sign com a plataforma [!DNL Veeva Vault]. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) criada para ciências biológicas. Um &quot;Vault&quot; é um repositório de conteúdo e dados com uso típico para arquivos regulatórios, relatórios de pesquisa, concessões de aplicativos, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
+Este documento explica como estabelecer a integração do Adobe Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) criada para ciências biológicas. Um &quot;Vault&quot; é um repositório de conteúdo e dados com uso típico para arquivos regulatórios, relatórios de pesquisa, concessões de aplicativos, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
 
 As etapas de alto nível para concluir a integração são:
 
 * Ativar sua conta administrativa no Adobe Sign (Somente novos clientes)
 * Crie objetos para controlar o histórico de um ciclo de vida do contrato no Vault.
 * Crie um novo perfil de Segurança.
-* Configure um Grupo no Adobe Sign para manter o usuário de integração [!DNL Veeva Vault].
+* Configure um grupo no Adobe Sign para manter [!DNL Veeva Vault] usuário de integração.
 * Crie campos de documento e representações.
 * Configure ações da Web e atualize o ciclo de vida do documento.
 * Criar configuração de usuário e função de usuário do tipo de documento.
@@ -41,7 +41,7 @@ As etapas de alto nível para concluir a integração são:
 
 ## Configure [!DNL Veeva Vault]
 
-Para configurar [!DNL Veeva Vault] para integração com o Adobe Sign, crie determinados objetos que ajudam a controlar o histórico de um ciclo de vida do contrato no Vault. Os administradores devem criar os seguintes objetos:
+Para configurar [!DNL Veeva Vault] para integração com a Adobe Sign, crie determinados objetos que ajudam a controlar o histórico de um ciclo de vida de contrato no Vault. Os administradores devem criar os seguintes objetos:
 
 * Assinatura
 * Signatário
@@ -115,7 +115,7 @@ Um objeto do Process Locker é criado para bloquear o processo de integração d
 
 ## Criar perfis de segurança{#security-profiles}
 
-Para uma integração bem-sucedida do Cofre, um novo perfil de segurança chamado *Perfil de Integração da Adobe Sign* é criado e a sua permissão é definida para *Ações de Administração da Adobe Sign*. O Perfil de integração da Adobe Sign é atribuído à conta do sistema e é usado pela integração ao chamar APIs do Vault. Este perfil permite permissões para:
+Para uma integração bem-sucedida do Cofre, um novo perfil de segurança chamado *Perfil de integração da Adobe Sign* é criada e sua permissão está definida para *Ações do administrador da Adobe Sign*. O Perfil de integração da Adobe Sign é atribuído à conta do sistema e é usado pela integração ao chamar APIs do Vault. Este perfil permite permissões para:
 
 * APIs do Vault
 * Leitura, criação, edição e exclusão: Objetos de assinatura, assinatura, eventos de assinatura e bloqueio de processo
@@ -145,7 +145,7 @@ Para garantir que o usuário da conta do sistema pertença ao Adobe Sign Admin G
 
 ## Criar Funções de Aplicativo {#create-application-roles}
 
-Você deve criar a função de aplicativo chamada *Função de Administrador do Adobe Sign*. Essa função deve ser definida no ciclo de vida de cada tipo de documento elegível para assinatura de Adobe. Para cada um dos estados de ciclo de vida específicos da Adobe Sign, a função de administrador da Adobe Sign é adicionada e configurada com as permissões apropriadas.
+Você deve criar a função de aplicativo chamada *Função de administrador da Adobe Sign*. Essa função deve ser definida no ciclo de vida de cada tipo de documento elegível para assinatura de Adobe. Para cada um dos estados de ciclo de vida específicos da Adobe Sign, a função de administrador da Adobe Sign é adicionada e configurada com as permissões apropriadas.
 
 ![Imagem de criar funções de aplicativo](images/create-application-roles.png)
 
@@ -162,13 +162,13 @@ Esses campos compartilhados devem ser adicionados a todos os tipos de documento 
 
 ![Imagem dos detalhes do campo de assinatura](images/signature-field-details.png)
 
-Os administradores devem adicionar o campo compartilhado existente *Desativar sobreposições de cofre (disable_vault_overlays__v)* e defini-lo como Ativo para todos os tipos de documento elegíveis para a assinatura de Adobe. Opcionalmente, o campo pode ter uma segurança específica que permite que apenas os membros do grupo Adobe Sign Admin atualizem seu valor.
+Os administradores devem adicionar o campo compartilhado existente *Desativar Sobreposições de Cofre (disable_vault_overlays__v)* e defina como Ativo para todos os tipos de documento elegíveis para assinatura de Adobe. Opcionalmente, o campo pode ter uma segurança específica que permite que apenas os membros do grupo Adobe Sign Admin atualizem seu valor.
 
 ![Imagem de permitir ações do usuário do Adobe Sign](images/allow-adobe-sign-user-actions.png)
 
 ## Criar representações de documentos {#create-renditions}
 
-Os administradores devem criar um novo tipo de representação chamado *Adobe Sign Rendition (adobe_sign_rendition__c)*, que é usado pela integração do Vault para carregar documentos de PDF assinados no Adobe Sign. A representação Adobe Sign deve ser declarada para cada tipo de documento elegível para a Assinatura de Adobe.
+Os administradores devem criar um novo tipo de representação chamado *Representação do Adobe Sign (adobe_sign_rendition__c)*, que é usado pela integração do Vault para carregar documentos de PDF assinados no Adobe Sign. A representação Adobe Sign deve ser declarada para cada tipo de documento elegível para a Assinatura de Adobe.
 
 ![Imagem de tipos de representação](images/rendition-type.png)
 
@@ -180,15 +180,11 @@ A integração entre o Adobe Sign e o Vault exige que você crie e configure as 
 
 * **Criar Adobe Sign**: Ele cria ou exibe o Contrato da Adobe Sign.
 
-   Tipo: Documento
-Destino: Exibir no cofre
-URL: <https://{integrationDomain}/adobe-sign-int/signature?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&sessionId=${Session.id}&vaultId=${Vault.Id>}
+   Tipo: Destino do documento: Exibir no URL do cofre: <https://{integrationDomain}/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultId=${Vault.Id>}
 
 * **Cancelar Adobe Sign**: Cancela um contrato existente no Adobe Sign e reverte o estado de um documento para o estado inicial.
 
-   Tipo: Documento
-Destino: Exibir no cofre
-URL: <https://{integrationDomain}/adobe-sign-int/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&sessionId=${Session.id}&vaultId=${Vault.Id>}
+   Tipo: Destino do documento: Exibir no URL do cofre: <https://{integrationDomain}/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultId=${Vault.Id>}
 
 ## Atualizar ciclo de vida do documento {#document-lifecycle}
 
@@ -216,24 +212,24 @@ O ciclo de vida do contrato da Adobe Sign tem os seguintes estados:
 
 Quando um documento do Vault é enviado à Adobe Sign, seu estado deve corresponder ao estado em que o contrato está. Para fazer isso, adicione os seguintes estados em cada ciclo de vida usado por documentos qualificados para assinatura de Adobe:
 
-* **Antes da assinatura**  de Adobe (revisado): Este é um nome de espaço reservado para o estado do qual o documento pode ser enviado para o Adobe Sign. Com base no tipo de documento, ele pode ser estado Rascunho ou Revisado. A etiqueta de estado do documento pode ser personalizada de acordo com os requisitos do cliente. Antes do estado de Assinatura de Adobe, defina as seguintes duas ações do usuário:
+* **Antes da assinatura de Adobe** (Revisado): Este é um nome de espaço reservado para o estado do qual o documento pode ser enviado para o Adobe Sign. Com base no tipo de documento, ele pode ser estado Rascunho ou Revisado. A etiqueta de estado do documento pode ser personalizada de acordo com os requisitos do cliente. Antes do estado de Assinatura de Adobe, defina as seguintes duas ações do usuário:
 
-   * Ação que altera o estado do documento para o estado *No Adobe Sign Draft*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
+   * Ação que altera o estado do documento para *No Adobe Sign Draft* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que chama a Ação Web de &quot;Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função de administrador da Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
    ![Imagem do estado do ciclo de vida 1](images/lifecycle-state1.png)
 
 * **No Adobe Sign Draft**: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está em um estado RASCUNHO. É um estado obrigatório. Esse estado deve definir as seguintes cinco ações do usuário:
 
-   * Ação que altera o estado do documento para *No estado Criação do Adobe Sign*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
-   * Ação que altera o estado do documento para *No estado de Assinatura do Adobe*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
-   * Ação que altera o estado do documento para o estado *Adobe Sign Canceled*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
+   * Ação que altera o estado do documento para *Na criação da Adobe Sign* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
+   * Ação que altera o estado do documento para *No estado de assinatura do Adobe*. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
+   * Ação que altera o estado do documento para *Adobe Sign cancelado* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que chama a ação Web &quot;Adobe Sign&quot;.
    * Ação que chama a Ação da Web &quot;Cancelar Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função Administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
    ![Imagem do estado do ciclo de vida 2](images/lifecycle-state2.png)
 
-* **Na criação** da Adobe Sign: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está no estado AUTORING ou DOCUMENTS_NOT_YET_PROCESSED. É um estado obrigatório. Esse estado deve ter quatro ações de usuário definidas:
+* **Na criação da Adobe Sign**: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está no estado AUTORING ou DOCUMENTS_NOT_YET_PROCESSED. É um estado obrigatório. Esse estado deve ter quatro ações de usuário definidas:
 
    * Ação que altera o estado do documento para o estado Cancelado da Adobe Sign. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento, independentemente do ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que altera o estado do documento para No estado de assinatura do Adobe. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento, independentemente do ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
@@ -242,12 +238,12 @@ Quando um documento do Vault é enviado à Adobe Sign, seu estado deve correspon
 
    ![Imagem do estado do ciclo de vida 3](images/lifecycle-state3.png)
 
-* **Na assinatura** de Adobe: Este é um nome de espaço reservado para o estado que indica que o documento foi carregado no Adobe Sign e que seu contrato já foi enviado aos participantes (estado OUT_FOR_SIGNATURE ou OUT_FOR_Approval). É um estado obrigatório. Esse estado deve ter cinco ações de usuário definidas:
+* **Na assinatura do Adobe**: Este é um nome de espaço reservado para o estado que indica que o documento foi carregado no Adobe Sign e que seu contrato já foi enviado aos participantes (estado OUT_FOR_SIGNATURE ou OUT_FOR_Approval). É um estado obrigatório. Esse estado deve ter cinco ações de usuário definidas:
 
    * Ação que altera o estado do documento para o estado Cancelado da Adobe Sign. O estado de destino desta ação pode ser qualquer exigência do cliente e pode ser diferente para tipos diferentes. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento, independentemente do ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que altera o estado do documento para o estado Adobe Sign Rejeitado. O estado de destino desta ação pode ser qualquer exigência do cliente e pode ser diferente para tipos diferentes. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento, independentemente do ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que altera o estado do documento para o estado de Adobe Assinado. O estado de destino desta ação pode ser qualquer exigência do cliente e pode ser diferente para tipos diferentes. No entanto, o nome dessa ação do usuário deve ser o mesmo para todos os tipos de documento, independentemente do ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
-   * Ação que chama a Ação da Web *Adobe Sign*.
+   * Ação que chama Ação Web *Adobe Sign*.
    * Ação que chama Ação da Web *Cancelar Adobe Sign*. Esse estado deve ter segurança que permita que a função Administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
    ![Imagem do estado do ciclo de vida 4](images/lifecycle-state4.png)
@@ -281,19 +277,19 @@ Depois que o(s) ciclo(s) de vida estiver(em) configurado(s) corretamente, o sist
 >
 >Se o objeto Configuração de função do usuário não contiver o campo que se refere ao objeto Grupo de tipos de documento, esse campo deverá ser adicionado.
 
-## Conectar [!DNL Veeva Vault] ao Adobe Sign usando middleware {#connect-middleware}
+## Conectar [!DNL Veeva Vault] à Adobe Sign usando middleware {#connect-middleware}
 
-Depois de concluir a configuração para [!DNL Veeva Vault] e a conta do Adobe Sign Admin, o administrador deve criar uma conexão entre as duas contas usando o middleware. A [!DNL Veeva Vault] e a conexão de conta da Adobe Sign são iniciadas pelo Adobe Sign Identity e, em seguida, são usadas para armazenar a identidade Veeva Vault.
-Para segurança e estabilidade do sistema, o administrador deve usar uma [!DNL Veeva Vault] conta de sistema/serviço/utilitário dedicada, como `adobe.for.veeva@xyz.com`, em vez de uma conta de usuário pessoal, como `bob.smith@xyz.com`.
+Depois de concluir a configuração para [!DNL Veeva Vault] e a conta do administrador da Adobe Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão de conta da Adobe Sign é iniciada pelo Adobe Sign Identity e, em seguida, é usada para armazenar a identidade Veeva Vault.
+Para segurança e estabilidade do sistema, o administrador deve usar um [!DNL Veeva Vault] conta de sistema/serviço/utilitário, como `adobe.for.veeva@xyz.com`, em vez de uma conta de usuário pessoal, como `bob.smith@xyz.com`.
 
-Um administrador de conta da Adobe Sign deve seguir as etapas abaixo para conectar [!DNL Veeva Vault] à Adobe Sign usando middleware:
+Um administrador de conta da Adobe Sign deve seguir as etapas abaixo para conectar-se [!DNL Veeva Vault] para Adobe Sign usando middleware:
 
-1. Vá para a [Adobe Sign para [!DNL Veeva Vault] página inicial](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
-1. Selecione **[!UICONTROL Login]** no canto superior direito.
+1. Vá para o [Adobe Sign para [!DNL Veeva Vault] Home page](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
+1. Selecionar **[!UICONTROL Logon]** no canto superior direito.
 
    ![Imagem do login do middleware](images/middleware_login.png)
 
-1. Na página de logon da Adobe Sign que é aberta, forneça o email e a senha do administrador da conta e selecione **[!UICONTROL Fazer logon]**.
+1. Na página de logon da Adobe Sign que é aberta, forneça o email e a senha do administrador da conta e, em seguida, selecione **[!UICONTROL Fazer logon]**.
 
    ![Imagem](images/middleware-signin.png)
 
@@ -301,33 +297,33 @@ Um administrador de conta da Adobe Sign deve seguir as etapas abaixo para conect
 
    ![Imagem](images/middleware_settings.png)
 
-1. Selecione a guia **[!UICONTROL Configurações]**.
+1. Selecione o **[!UICONTROL Configurações]** guia.
 
    A página Configurações exibe as conexões disponíveis e nenhuma em caso de configuração da primeira conexão, conforme mostrado abaixo.
 
    ![Imagem](images/middleware_newconnection.png)
 
-1. Selecione **[!UICONTROL Adicionar Ligação]** para adicionar uma nova ligação.
+1. Selecionar **[!UICONTROL Adicionar conexão]** para adicionar uma nova conexão.
 
-1. Na caixa de diálogo Adicionar conexão que é aberta, forneça os detalhes necessários, incluindo as credenciais [!DNL Veeva Vault].
+1. Na caixa de diálogo Adicionar conexão que é aberta, forneça os detalhes necessários, incluindo [!DNL Veeva Vault] credenciais.
 
    As credenciais da Adobe Sign são preenchidas automaticamente a partir do logon inicial da Adobe Sign.
 
    ![Imagem](images/middleware_addconnection.png)
 
-1. Selecione **[!UICONTROL Validar]** para validar os detalhes da conta.
+1. Selecionar **[!UICONTROL Validar]** para validar os detalhes da conta.
 
    Na validação bem-sucedida, você verá uma notificação de &quot;Validação de usuário bem-sucedida&quot;, conforme mostrado abaixo.
 
    ![Imagem](images/middleware_validated.png)
 
-1. Para restringir o uso a um grupo Adobe Sign específico, expanda a lista suspensa **[!UICONTROL Grupo]** e selecione um dos grupos disponíveis.
+1. Para restringir o uso a um grupo Adobe Sign específico, expanda o **[!UICONTROL Grupo]** lista suspensa e selecione um dos grupos disponíveis.
 
    ![Imagem](images/middleware_group.png)
 
-1. Selecione **[!UICONTROL Salvar]** para salvar a nova conexão.
+1. Selecionar **[!UICONTROL Salvar]** para salvar sua nova conexão.
 
-   A nova conexão é exibida na guia Configurações mostrando a integração bem-sucedida entre [!DNL Veeva Vault] e o Adobe Sign.
+   A nova conexão é exibida na guia Configurações mostrando a integração bem-sucedida entre [!DNL Veeva Vault] e Adobe Sign.
 
    ![Imagem](images/middleware_setup.png)
 
