@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1c95f3eb0ddb077cad53a82b1a56358637839b16
+source-git-commit: 7ded835b48519cba656f160e691c697c91e2c8d0
 workflow-type: tm+mt
-source-wordcount: '3113'
+source-wordcount: '3131'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ As etapas de alto nível para concluir a integração são:
 >
 >O administrador da Adobe Sign deve executar as etapas de configuração do Adobe Sign no Adobe Sign.
 
-## Configure [!DNL Veeva Vault]
+## Configure [!DNL Veeva Vault] {#configure-veeva}
 
 Para configurar [!DNL Veeva Vault] para integração com a Adobe Sign, crie determinados objetos que ajudam a controlar o histórico de um ciclo de vida de contrato no Vault. Os administradores devem criar os seguintes objetos:
 
@@ -180,11 +180,11 @@ A integração entre o Adobe Sign e o Vault exige que você crie e configure as 
 
 * **Criar Adobe Sign**: Ele cria ou exibe o Contrato da Adobe Sign.
 
-   Tipo: Destino do documento: Exibir no URL do cofre: <https://{integrationDomain}/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultId=${Vault.Id>}
+   Tipo: Destino do documento: Exibir no URL do cofre: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
 * **Cancelar Adobe Sign**: Cancela um contrato existente no Adobe Sign e reverte o estado de um documento para o estado inicial.
 
-   Tipo: Destino do documento: Exibir no URL do cofre: <https://{integrationDomain}/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultId=${Vault.Id>}
+   Tipo: Destino do documento: Exibir no URL do cofre: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
 ## Atualizar ciclo de vida do documento {#document-lifecycle}
 
@@ -217,7 +217,7 @@ Quando um documento do Vault é enviado à Adobe Sign, seu estado deve correspon
    * Ação que altera o estado do documento para *No Adobe Sign Draft* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento para qualquer ciclo de vida. Se necessário, os critérios para essa ação podem ser definidos como &quot;Permitir ações do usuário da Adobe Sign é igual a Sim&quot;.
    * Ação que chama a Ação Web de &quot;Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função de administrador da Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
-   ![Imagem do estado do ciclo de vida 1](images/lifecycle-state1.png)
+      ![Imagem do estado do ciclo de vida 1](images/lifecycle-state1.png)
 
 * **No Adobe Sign Draft**: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está em um estado RASCUNHO. É um estado obrigatório. Esse estado deve definir as seguintes cinco ações do usuário:
 
@@ -227,7 +227,7 @@ Quando um documento do Vault é enviado à Adobe Sign, seu estado deve correspon
    * Ação que chama a ação Web &quot;Adobe Sign&quot;.
    * Ação que chama a Ação da Web &quot;Cancelar Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função Administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
-   ![Imagem do estado do ciclo de vida 2](images/lifecycle-state2.png)
+      ![Imagem do estado do ciclo de vida 2](images/lifecycle-state2.png)
 
 * **Na criação da Adobe Sign**: Este é um nome de espaço reservado para o estado que indica que o documento já foi carregado no Adobe Sign e que seu contrato está no estado AUTORING ou DOCUMENTS_NOT_YET_PROCESSED. É um estado obrigatório. Esse estado deve ter quatro ações de usuário definidas:
 
@@ -236,7 +236,7 @@ Quando um documento do Vault é enviado à Adobe Sign, seu estado deve correspon
    * Ação que chama a Ação Web de &quot;Adobe Sign&quot;
    * Ação que chama a Ação da Web &quot;Cancelar Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função Administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
-   ![Imagem do estado do ciclo de vida 3](images/lifecycle-state3.png)
+      ![Imagem do estado do ciclo de vida 3](images/lifecycle-state3.png)
 
 * **Na assinatura do Adobe**: Este é um nome de espaço reservado para o estado que indica que o documento foi carregado no Adobe Sign e que seu contrato já foi enviado aos participantes (estado OUT_FOR_SIGNATURE ou OUT_FOR_Approval). É um estado obrigatório. Esse estado deve ter cinco ações de usuário definidas:
 
@@ -246,7 +246,7 @@ Quando um documento do Vault é enviado à Adobe Sign, seu estado deve correspon
    * Ação que chama Ação Web *Adobe Sign*.
    * Ação que chama Ação da Web *Cancelar Adobe Sign*. Esse estado deve ter segurança que permita que a função Administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar a origem, gerenciar representações visíveis e alterar o estado.
 
-   ![Imagem do estado do ciclo de vida 4](images/lifecycle-state4.png)
+      ![Imagem do estado do ciclo de vida 4](images/lifecycle-state4.png)
 
 * **Adobe assinado (aprovado)**: Este é um nome de espaço reservado para o estado que indica que o documento foi carregado no Adobe Sign e que seu contrato foi concluído (estado ASSINADO ou APROVADO). É um estado obrigatório e pode ser um estado do ciclo de vida existente, como Aprovado.
 Esse estado não requer ações do usuário. Esse estado deve ter segurança que permita que a função de Administrador do Adobe Sign: exibir documentos, exibir conteúdo e editar campos.
@@ -262,6 +262,8 @@ O diagrama a seguir ilustra os mapeamentos entre o contrato da Adobe Sign e os e
 Os administradores devem criar um novo registro de Grupo de tipos de documento chamado &quot;Documento Adobe Sign&quot;. Este grupo de tipos de documento é adicionado para todas as classificações de documento qualificadas para o processo Adobe Sign. Como a propriedade de grupo de tipo de documento não é herdada do tipo para subtipo nem do subtipo para o nível de classificação, ela deve ser definida para a classificação de cada documento elegível para Adobe Sign.
 
 ![Imagem do tipo de documento](images/document-type.png)
+
+![Imagem do tipo de documento](images/document-edit-details.png)
 
 ### Criar Configuração de Função de Usuário {#create-user-role-setup}
 
@@ -335,7 +337,7 @@ Um administrador de conta da Adobe Sign deve seguir as etapas abaixo para conect
 
 **Etapa 2.** Crie um novo grupo de tipos de documento chamado &#39;Documento Adobe Sign&#39;.
 
-**Etapa 3.** Implante o pacote.
+**Etapa 3.** [Implantar o pacote](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip).
 
 **Passo 4.** Crie um novo Grupo gerenciado pelo usuário chamado &#39;Grupo de administradores da Adobe Sign&#39;.
 
@@ -359,7 +361,7 @@ Um administrador de conta da Adobe Sign deve seguir as etapas abaixo para conect
 
 **Etapa 2.** Crie um novo Grupo de Tipos de Documento chamado &#39;Documento Adobe Sign&#39;.
 
-**Etapa 3.** Implante o pacote.
+**Etapa 3.** [Implantar o pacote](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip).
 
 **Passo 4.** Crie um novo Grupo gerenciado pelo usuário chamado &#39;Adobe Sign Admin Group&#39;.
 
