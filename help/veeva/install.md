@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: aef70e46f24bb019b07092d84d69519fe16846e4
+source-git-commit: 1cf95ee799d0a349636027db0c06467f4529663c
 workflow-type: tm+mt
-source-wordcount: '3163'
+source-wordcount: '3164'
 ht-degree: 2%
 
 ---
@@ -363,7 +363,7 @@ Um administrador de conta da Adobe Sign deve seguir as etapas abaixo para conect
 
 **Passo 10.** Adicione o grupo de tipos de documento chamado &#39;Documento Adobe Sign&#39; para todas as classificações de documento qualificadas para o processo Adobe Sign.
 
-**Passo 11.** Quando todas as configurações estiverem completas, o sistema deve garantir que o usuário do Adobe Sign Admin seja adicionado pelo DAC a todos os documentos qualificados para o processo Adobe Sign. Isso é feito criando o registro de Configuração da função de usuário apropriado que especifica o Grupo de tipos de documento como &quot;Documento Adobe Sign&quot;, Função do aplicativo como &quot;Função de administrador do Adobe Sign&quot; e um usuário de integração.
+**Passo 11.** Quando todas as configurações estiverem completas, o sistema deve garantir que o usuário do Adobe Sign Admin seja adicionado pelo DAC a todos os documentos qualificados para o processo do Adobe Sign. Isso é feito criando o registro de Configuração da função de usuário apropriado que especifica o Grupo de tipos de documento como &quot;Documento Adobe Sign&quot;, Função do aplicativo como &quot;Função de administrador do Adobe Sign&quot; e um usuário de integração.
 
 ### Ciclo de vida de implantação específico {#specific-deployment}
 
