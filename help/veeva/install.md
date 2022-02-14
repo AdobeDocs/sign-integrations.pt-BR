@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c3ad36ec887230d746d8d2084127155615f1d0b9
+source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
 workflow-type: tm+mt
-source-wordcount: '3145'
+source-wordcount: '3169'
 ht-degree: 3%
 
 ---
@@ -34,6 +34,7 @@ As etapas de alto nível para concluir a integração são:
 * Crie campos de documento e representações.
 * Configurar ações da Web e atualizar o ciclo de vida do documento.
 * Criar tipo de documento configuração de usuário e função de usuário.
+* Conecte o Veeva Vault ao Adobe Sign usando middleware.
 
 >[!NOTE]
 >
@@ -233,13 +234,13 @@ A integração do Adobe Sign e do Vault exige que você crie e configure as duas
 
 * **Criar Adobe Sign**: Ele cria ou exibe o Contrato do Adobe Sign.
 
-   Tipo: Destino do documento: Exibir no URL do Cofre: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   Tipo: Destino do documento: Exibir dentro das Credenciais do Vault: Habilitar credenciais de Post Session via URL de Post Message: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Image of create Adobe Sign](images/create-adobe-sign.png)
 
 * **Cancelar Adobe Sign**: Ele cancela um contrato existente no Adobe Sign e reverte o estado de um documento para o estado inicial.
 
-   Tipo: Destino do documento: Exibir no URL do Cofre: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   Tipo: Destino do documento: Exibir dentro das Credenciais do Vault: Habilitar credenciais de Post Session via URL de Post Message: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Image of cancel Adobe Sign](images/cancel-adobe-sign.png)
 
