@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
+source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
 workflow-type: tm+mt
-source-wordcount: '3169'
+source-wordcount: '3428'
 ht-degree: 3%
 
 ---
@@ -125,13 +125,51 @@ O objeto Evento de assinatura é criado para armazenar informações relacionada
 | participant_role__c | Função do participante | Sequência de caracteres | Mantém a função do participante do Adobe Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
 
-![Imagem dos detalhes do evento de assinatura](images/signature-event-object-details.png)
+![Imagem](images/signature-event-object-details.png)
 
 #### Objeto Process Locker {#process-locker}
 
 Um objeto Process Locker é criado para bloquear o processo de integração do Adobe Sign. Não requer campos personalizados.
 
 ![Imagem dos detalhes do evento de assinatura](images/process-locker-details.png)
+
+Os objetos Signature, Signatory, Signature Event e Process Locker que fazem parte do pacote de implantação têm a propriedade &quot;Audit data changes for this object&quot; ativada por padrão.
+
+**Observação:** Para incluir as alterações de dados do registro do objeto de captura do Vault nos registros de auditoria, ative a configuração Alterações de dados de auditoria. Essa configuração fica desativada por padrão. Depois de ativar essa configuração e criar registros, você não poderá desativá-la. Se essa configuração estiver desativada e houver registros, somente um Proprietário do Vault poderá atualizá-la.
+
+#### **Exibir participantes e histórico do objeto de assinatura** {#display-participants-history}
+
+O objeto Signature que faz parte do pacote de implantação vem com o [Layout da página de detalhes da assinatura](https://vvtechpartner-adobe-rim.veevavault.com/ui/#admin/content_setup/object_schema/pagelayout?t=signature__c&amp;d=signature_detail_page_layout__c). O Layout de página tem seções para Participantes e Histórico.
+
+* O *Participantes* A seção Objetos Relacionados está configurada conforme mostrado na imagem abaixo.
+
+   ![Imagem](images/edit-related-objects.png)
+
+* Você pode editar as colunas a serem exibidas para os Participantes, conforme mostrado abaixo.
+
+   ![Imagem](images/set-columns-to-display.png)
+
+* O *Histórico* A seção Objetos Relacionados está configurada conforme mostrado na imagem abaixo.
+
+   ![Imagem](images/edit-related-object-in-history.png)
+
+* Você pode editar as colunas a serem exibidas no Histórico, conforme mostrado abaixo.
+
+   ![Imagem](images/select-columns-to-display.png)
+
+#### **Exibir participantes e histórico de auditoria do documento do Adobe Sign** {#view-participants-audit-history}
+
+* Para exibir os Participantes e o histórico de auditoria do documento do Adobe Sign, selecione o link na seção &#39;Adobe Signature&#39; do documento.
+
+   ![Imagem](images/view-participants-audit-history.png)
+
+* A página que é aberta exibe os Participantes e o Histórico do documento do Adobe Sign, conforme mostrado abaixo.
+
+   ![Imagem](images/participants-and-history.png)
+
+* Veja a trilha de áudio para assinatura conforme mostrado abaixo.
+
+   ![Imagem](images/audit-trail.png)
 
 ### Etapa 3. Configurar perfis de segurança {#security-profiles}
 
