@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
+source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3431'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,7 @@ Um objeto Process Locker é criado para bloquear o processo de integração do A
 
 Os objetos Signature, Signatory, Signature Event e Process Locker que fazem parte do pacote de implantação têm a propriedade &quot;Audit data changes for this object&quot; ativada por padrão.
 
-**Observação:** Para incluir as alterações de dados do registro do objeto de captura do Vault nos registros de auditoria, ative a configuração Alterações de dados de auditoria. Essa configuração fica desativada por padrão. Depois de ativar essa configuração e criar registros, você não poderá desativá-la. Se essa configuração estiver desativada e houver registros, somente um Proprietário do Vault poderá atualizá-la.
+**Observação:** Você pode fazer com que o Vault capture as alterações de dados do registro do objeto nos registros de auditoria ativando a configuração Auditar alterações de dados. Essa configuração fica desativada por padrão. Depois de ativar essa configuração e criar registros, você não poderá mais desativá-la. Se essa configuração estiver desativada e houver registros, somente um Proprietário do Vault poderá atualizá-la.
 
 #### **Exibir participantes e histórico do objeto de assinatura** {#display-participants-history}
 
@@ -167,7 +167,7 @@ O objeto Signature que faz parte do pacote de implantação vem com o [Layout da
 
    ![Imagem](images/participants-and-history.png)
 
-* Veja a trilha de áudio para assinatura conforme mostrado abaixo.
+* Veja a trilha de auditoria para assinatura conforme mostrado abaixo.
 
    ![Imagem](images/audit-trail.png)
 
