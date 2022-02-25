@@ -1,5 +1,5 @@
 ---
-title: '[!DNL Veeva Vault] Guia de instalação'
+title: '"[!DNL Veeva Vault] Guia de instalação"'
 description: Guia de instalação para ativar a integração do Adobe Sign com a Veeva
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
@@ -10,7 +10,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
+source-git-commit: 04a3e58da81c1a034318807776077d0076eec85f
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 3%
