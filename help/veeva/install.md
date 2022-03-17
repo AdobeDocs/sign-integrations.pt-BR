@@ -10,7 +10,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: b9d0ac0cccc8785469172fd805e7b878743c7c07
+source-git-commit: c108714c960b68342539da8e37ac88622c963ed5
 workflow-type: tm+mt
 source-wordcount: '3498'
 ht-degree: 3%
@@ -265,7 +265,7 @@ O novo tipo de representação chamado *Adobe Sign Rendition (adobe_sign_renditi
 
 ![Imagem de tipos de representação](images/rendition-type.png)
 
-![Imagem](images/edit-details-clinical-type.png)
+![Imagem](images/edit-details-clinical.png)
 
 O novo tipo de representação chamado *Representação original (original_rendition__c)* é usado pela integração do Vault como o nome da representação que deve ser usada para armazenar a representação visível original se o documento assinado for importado como representação visível.
 
