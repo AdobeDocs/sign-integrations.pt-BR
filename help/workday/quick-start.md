@@ -7,11 +7,11 @@ content-type: reference
 discoiquuid: 13135c88-4c39-4707-b7ba-63ff94769258
 locnotes: All languages; screenshots to follow what's there already (seems there is a mix within a given language version of the article)
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
-source-git-commit: 5ac9dc27dcdb6cab19281e6aafd4ea0524cc01d6
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 31%
@@ -24,34 +24,34 @@ ht-degree: 31%
 
 ## Visão geral {#overview}
 
-Este documento foi desenvolvido para ajudar [!DNL Workday] os administradores entendem como personalizar o [!DNL Workday] Processos corporativos para incluir a Adobe Sign para obter assinaturas eletrônicas. Para usar o Adobe Sign no [!DNL Workday], você deve saber como criar e modificar [!DNL Workday] itens como:
+Este documento foi criado para ajudar [!DNL Workday] os administradores entendem como personalizar o [!DNL Workday] Processos corporativos para incluir o Adobe Sign na obtenção de assinaturas eletrônicas. Para usar o Adobe Sign em [!DNL Workday], você deve saber como criar e modificar [!DNL Workday] itens como:
 
-* [!UICONTROL Estrutura do processo de negócios]
-* Configuração e configuração do inquilino
+* [!UICONTROL Estrutura de Processo de Negócios]
+* Instalação e configuração de inquilino
 * Relatórios e [!DNL Workday] Integração com o Studio
 
 ## Acesso ao Adobe Sign diretamente do [!DNL Workday] {#access-adobe-sign}
 
-[!UICONTROL Recurso de assinatura eletrônica da Adobe Sign] é exibido como [!UICONTROL Etapa de revisão do documento] ação no [!UICONTROL Estrutura de Processos de Negócios (BPF)] e como uma tarefa Distribuir documentos.
+[!UICONTROL Recurso de assinatura eletrônica do Adobe Sign] é apresentado como [!UICONTROL Etapa Revisão do documento] ação no âmbito do [!UICONTROL Estrutura de processos de negócios (BPF)] e como uma tarefa Distribuir documentos.
 
 ## [!UICONTROL Etapa de Review Document (Revisão de documento)] {#review-document-step}
 
-Adobe Sign para [!DNL Workday] é exposto via [!UICONTROL Etapa de revisão do documento] que você pode adicionar a qualquer um dos mais de 400 processos corporativos [!DNL Workday], incluindo [!UICONTROL Oferta], [!UICONTROL Distribuir documentos e tarefas], [!UICONTROL Propor compensação]e muito mais.
+Adobe Sign para [!DNL Workday] é exposta através da [!UICONTROL Etapa Revisão do documento] que você pode adicionar a qualquer um dos mais de 400 processos de negócios [!DNL Workday], incluindo [!UICONTROL Oferta], [!UICONTROL Distribuir documentos e tarefas], [!UICONTROL Propor Compensação]e muito mais.
 
-Você pode consultar o [[!DNL Workday] artigos da comunidade [!UICONTROL Etapa de revisão do documento]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
+Você pode consultar o [[!DNL Workday] artigos comunitários sobre [!UICONTROL Etapa Revisão do documento]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
 
-Há uma relação 1:1 entre [!UICONTROL [!UICONTROL Etapa de revisão do documento]s] e transações faturáveis com a Adobe Sign. É possível combinar vários documentos em um único [!UICONTROL Etapa de revisão do documento] e são apresentados como um pacote único para assinatura.
+Há uma relação 1:1 entre [!UICONTROL [!UICONTROL Etapa Revisão do documento]s] e faturáveis com a Adobe Sign. É possível combinar vários documentos em um só [!UICONTROL Etapa Revisão do documento] e são apresentados como um pacote único para assinatura.
 
-**Nota**: Somente um *Dinâmico* o documento pode ser referenciado em um [!UICONTROL Etapa de revisão do documento].
+**Observação**: Apenas um *Dinâmico* documento pode ser referenciado em um [!UICONTROL Etapa Revisão do documento].
 
-Para definir um [!UICONTROL Etapa de revisão do documento]:
+Para definir uma função [!UICONTROL Etapa Revisão do documento]:
 
-1. Inserir um [!UICONTROL Etapa de revisão do documento].
-1. Especifique os Grupos (funções) que podem atuar no [!UICONTROL Etapa de revisão do documento].
+1. Inserir um [!UICONTROL Etapa Revisão do documento].
+1. Especifique os Grupos (funções) que podem atuar no [!UICONTROL Etapa Revisão do documento].
 
 ![As etapas do Processo corporativo](images/insert-review-doc-steptornm-575.png)
 
-Para configurar o [!UICONTROL Etapa de revisão do documento]:
+Para configurar o [!UICONTROL Etapa Revisão do documento]:
 
 1. Especifique o *[!UICONTROL eSignature Integration type]* (Tipo de integração de eSignature) como *[!UICONTROL eSign by Adobe]*.
 
@@ -60,29 +60,29 @@ Para configurar o [!UICONTROL Etapa de revisão do documento]:
    * A grade de assinatura especifica a ordem serial na qual o documento está roteado para assinatura. Cada linha pode conter uma ou mais funções, bem como pode representar uma etapa no processo de assinatura.
    * Cada membro da função em uma etapa específica é notificado sobre o evento de assinatura pendente.
    * Depois que uma única pessoa da função assina, a etapa da linha é concluída e o documento continua para a próxima etapa de linha.
-   * Quando todas as linhas forem assinadas, o [!UICONTROL Etapa de revisão do documento] está concluído.
+   * Quando todas as linhas tiverem sido assinadas, o [!UICONTROL Etapa Revisão do documento] está concluído.
 
-1. Especifique o documento que será assinado. Se o documento for um [!UICONTROL Oferecer BP], você pode usá-lo de uma etapa Gerar documento. Caso contrário, escolha um documento ou relatório já existente.
+1. Especifique o documento que será assinado. Se o documento for um [!UICONTROL Oferta BP], você pode usá-lo a partir de uma etapa Gerar documento. Caso contrário, escolha um documento ou relatório já existente.
 
 1. Repita a etapa 3 para os documentos necessários.
 
    ![Configurar a etapa de Review Document (Revisão de documento)](images/configure-rd-stepsmaller-575.png)
 
-1. Opcionalmente, adicione um &quot;usuário de redirecionamento&quot; para capturar ações de &quot;recusar a assinatura&quot;. Quando os usuários recusam, [!DNL Workday] Redireciona os documentos para um grupo de segurança configurado para revisão.
+1. Opcionalmente, adicione um &quot;usuário de redirecionamento&quot; para capturar as ações de &quot;recusar assinatura&quot;. Quando os usuários recusam, [!DNL Workday] roteia novamente os documentos para um grupo de segurança configurado para revisão.
 
-No menu de ações relacionadas de um [!UICONTROL Etapa de revisão do documento], selecione **[!UICONTROL Processo comercial]** > **[!UICONTROL Manter redirecionamento]**. Em seguida, selecione uma das seguintes opções:
+No menu de ações relacionadas de um [!UICONTROL Etapa Revisão do documento], selecione **[!UICONTROL Processo de negócios]** > **[!UICONTROL Manter Redirecionamento]**. Em seguida, selecione uma das seguintes opções:
 
-* **[!UICONTROL Enviar para trás]**: Para permitir que os membros do grupo de segurança enviem uma etapa de volta para uma etapa anterior no processo de negócios. O processo corporativo reinicia a partir dessa etapa.
-* **[!UICONTROL Mover para a próxima etapa]**: Para permitir que os membros do grupo de segurança encaminhem uma etapa para a próxima etapa no processo de negócios.
-* **[!UICONTROL Grupos de segurança]**: Para redirecionar as etapas no fluxo do processo de negócios. Os grupos de segurança exibidos nesse prompt são selecionados na política de segurança do processo de negócios na seção Redirecionar.
+* **[!UICONTROL Enviar de volta]**: Para permitir que os membros do grupo de segurança enviem uma etapa de volta a uma etapa anterior no processo de negócios. O processo corporativo reinicia a partir dessa etapa.
+* **[!UICONTROL Mover para a próxima etapa]**: Para permitir que os membros do grupo de segurança encaminhem uma etapa para a próxima etapa do processo de negócios.
+* **[!UICONTROL Grupos de Segurança]**: Para redirecionar etapas no fluxo do processo empresarial. Os grupos de segurança exibidos nesse prompt são selecionados na política de segurança do processo de negócios na seção Redirecionar.
 
-## Notas de etapa do processo comercial {#business-process-step-notes}
+## Notas da etapa do processo empresarial {#business-process-step-notes}
 
-[!UICONTROL Estrutura do Processo de Negócios] é poderoso; no entanto, você deve garantir que:
+[!UICONTROL A estrutura do processo empresarial] é poderoso; no entanto, você deve garantir que:
 
-* Cada Processo de Negócios deve ter uma etapa de conclusão, que é ideal no final do processo de negócios.
+* Todo Processo de Negócios deve ter uma etapa de conclusão, que é idealmente o final do processo de negócios.
 
-* Uma etapa de conclusão é definida no menu de ações relacionadas do ícone de pesquisa. Isso só é possível ao &quot;visualizar&quot; a BP e não ao &quot;editá-la&quot;.
+* Uma etapa de conclusão é definida no menu de ações relacionadas do ícone de pesquisa. Isso é possível apenas ao &quot;visualizar&quot; o BP e não ao &quot;editá-lo&quot;.
 
 * Cada etapa do processo corporativo é executada de modo sequencial.
 
@@ -90,47 +90,47 @@ No menu de ações relacionadas de um [!UICONTROL Etapa de revisão do documento
 
 ### Exemplo: oferta {#example-offer}
 
-O BP da oferta é um subprocesso do [!UICONTROL BP Dinâmico do Aplicativo de Trabalho] que deve ser configurado para executar o BP da oferta. É acionado quando o estado da Aplicação de Trabalho é movido para &quot;[!UICONTROL Oferta]&quot; ou &quot;[!UICONTROL Fazer oferta]&quot;.
+O BP da oferta é um subprocesso do [!UICONTROL BP Dinâmico de Aplicativo de Trabalho] que deve ser configurado para executar o BP da Oferta. É acionado quando o estado do Aplicativo de trabalho é movido para &quot;[!UICONTROL Oferta]&quot; ou &quot;[!UICONTROL Fazer Oferta]&quot;.
 
-No exemplo abaixo, um [!UICONTROL Etapa de revisão do documento] O está usando uma etapa de Documento dinâmico para a América do Norte e o Japão.
+No exemplo abaixo, uma [!UICONTROL Etapa Revisão do documento] O está usando uma etapa de Documento dinâmico para a América do Norte e o Japão.
 
 ![[!DNL Workday]Exemplo de um Processo corporativo do ](images/bp-for-offersmaller-575.png)
 
 O BP faz o seguinte:
 
-* Solicita ao iniciador do BP que proponha uma compensação para o candidato (etapa b).
+* Solicita ao promotor da BP que proponha uma compensação para o candidato (etapa b).
 * Usa uma condição de etapa para testar se o país atual NÃO é o Japão.
 
-   Se verdadeiro, ele executa a etapa &quot;ba&quot; que usa um documento em inglês.
+   Se verdadeiro, executa a etapa &quot;ba&quot;, que usa um documento em inglês.
 
-   Se for falso, ele executa a etapa &quot;bb&quot; que usa um documento em japonês.
+   Se falso, executa a etapa &quot;bb&quot;, que usa um documento em japonês.
 
-* Define o processo de assinatura no [!UICONTROL Etapa de revisão do documento] &quot;bc&quot;.
-* Define o ponto de decisão para fazer uma oferta na etapa de conclusão necessária &quot;d&quot;.
+* Define o processo de assinatura no [!UICONTROL Etapa Revisão do documento] &quot;bc&quot;.
+* Define o ponto de decisão para fazer uma oferta na etapa de conclusão obrigatória &quot;d&quot;.
 
-O documento dinâmico gerado na etapa “ba” é chamado de [!UICONTROL Offer Letter] (Carta de proposta) e contém um único bloco de texto chamado de [!UICONTROL Rapid Offer] (Oferta rápida). Você pode adicionar vários blocos de texto, como cabeçalho, saudação, compensação, estoque, fechamento, termos e muito mais, conforme necessário.
+O documento dinâmico gerado na etapa “ba” é chamado de [!UICONTROL Offer Letter] (Carta de proposta) e contém um único bloco de texto chamado de [!UICONTROL Rapid Offer] (Oferta rápida). Você pode adicionar vários blocos de texto, como cabeçalho, saudação, remuneração, estoque, fechamento, termos e muito mais, conforme necessário.
 
 ![[!DNL Workday] exibir página do documento](images/offer-letter-575.png)
 
-A carta de oferta dinâmica abaixo é criada no [!DNL Workday] editor de rich text. Os itens realçados em *cinza* são [!DNL Workday] objetos fornecidos que fazem referência a dados contextuais.
+A carta de oferta dinâmica abaixo é criada no [!DNL Workday] editor de rich text. Os itens destacados em *cinza* são [!DNL Workday] objetos fornecidos que fazem referência a dados contextuais.
 
 Os itens entre {{chaves}} são [Tags de texto da Adobe](https://adobe.com/go/adobesign_text_tag_guide_br).
 
 ![Exemplo de formulário dinâmico](images/script.png)
 
-No [!UICONTROL Etapa de revisão do documento], o documento dinâmico é referenciado da etapa anterior e define o processo de assinatura sequencial por meio de dois grupos de assinatura.
+No âmbito do [!UICONTROL Etapa Revisão do documento], o documento dinâmico é referenciado da etapa anterior e define o processo de assinatura sequencial por meio de dois grupos de assinatura.
 
-O comportamento ilustrado abaixo encaminha o documento gerado dinamicamente primeiro para o Gerente de contratação e, em seguida, para o Candidato.
+O comportamento ilustrado abaixo roteia o documento gerado dinamicamente primeiro para o Gerente de Contratação e, em seguida, para o Candidato.
 
-![[!DNL Workday] grupos de assinatura definidos](images/configure-rd-stepsmaller-575.png)
+![[!DNL Workday] grupos de assinatura sendo definidos](images/configure-rd-stepsmaller-575.png)
 
 ### Exemplo: Distribuir documentos {#example-distribute-documents}
 
-Introduzido em [!DNL Workday] 30, a tarefa Distribuir documentos ou tarefas em massa pode ser usada para enviar um único documento para um grande grupo (&lt;20K) de signatários individuais. É limitado a uma só assinatura por documento. A criação de uma distribuição é efetuada através do acesso ao[!UICONTROL Criar Distribuir Documentos ou Tarefas]Ação da barra de pesquisa.
+Introduzido em [!DNL Workday] 30, a tarefa Distribuir documentos ou tarefas em massa pode ser usada para enviar um único documento para um grande grupo (&lt;20K) de signatários individuais. É limitado a uma só assinatura por documento. A criação de uma distribuição é feita acessando o[!UICONTROL Criar e distribuir documentos ou tarefas]da barra de pesquisa.
 
-Exemplo: Enviar um formulário de escolha de patrimônio líquido para todos os gerentes com [!UICONTROL Serviços modernos globais]. Você pode filtrá-lo ainda mais para gerentes individuais, se desejar.
+Exemplo: Enviar um formulário de escolha de patrimônio líquido do funcionário para todos os gerentes com [!UICONTROL Serviços modernos globais]. Você pode filtrá-lo ainda mais para gerentes individuais, se desejar.
 
-Você também pode acessar o **Exibir Distribuir documentos ou tarefas** para acompanhar o progresso da distribuição.
+Você também pode acessar o **Exibir Distribuir Documentos ou Tarefas** para acompanhar o progresso da distribuição.
 
 ![](images/create-distributedocumentsortasks.png)
 
@@ -154,24 +154,24 @@ Você pode visualizar:
 
 ## Documentos assinados {#signed-documents}
 
-O [!DNL Workday] o ciclo de assinatura suprime todas as notificações por email da Adobe Sign. Os usuários são informados sobre ações pendentes em seus [!DNL Workday] caixa de entrada.
+O [!DNL Workday] o ciclo de assinatura suprime todas as notificações por email do Adobe Sign. Os usuários são informados de ações pendentes em seus [!DNL Workday] caixa de entrada.
 
-Uma vez que um documento é assinado por todos os grupos de assinatura, uma cópia do documento assinado é distribuída para todos os membros do grupo de assinatura por email.
+Depois que um documento é assinado por todos os Grupos de assinatura, uma cópia do documento assinado é distribuída a todos os membros do Grupo de assinatura por email.
 
-Para suprimir esse comportamento, você pode entrar em contato com o [!UICONTROL Adobe Sign Success Manager] ou [Equipe de suporte da Adobe Sign](https://adobe.com/go/adobesign-support-center).
+Para suprimir esse comportamento, entre em contato com o [!UICONTROL Adobe Sign Success Manager] ou [Equipe de suporte da Adobe Sign](https://adobe.com/go/adobesign-support-center).
 
-Dentro [!DNL Workday], você pode acessar os documentos assinados no registro completo do processo. Você pode encontrar:
+No [!DNL Workday], você pode acessar os documentos assinados no registro completo do processo. Você pode encontrar:
 
-* Documentos do trabalhador no perfil do trabalhador e
-* Documentos candidatos (cartas de proposta) no perfil Candidato.
+* Documentos do trabalhador no Perfil do trabalhador e
+* Documentos do candidato (cartas de oferta) no Perfil do candidato.
 
 A imagem abaixo mostra uma carta de oferta assinada para o candidato Chris Foxx.
 
-![Exemplo [!DNL Workday] carta oferta](images/offer.png)
+![Exemplo [!DNL Workday] carta de oferta](images/offer.png)
 
 ## Suporte {#support}
 
-### [!DNL Workday] apoio {#workday-support}
+### [!DNL Workday] suporte {#workday-support}
 
 [!DNL Workday]O é o proprietário da integração e deve ser o seu primeiro ponto de contato em caso de dúvidas sobre o escopo da integração, solicitações de recursos ou problemas nas funções diárias da integração.
 
@@ -182,11 +182,11 @@ O [!DNL Workday] a comunidade tem vários bons artigos sobre como solucionar pro
 * [Geração dinâmica de documentos](https://community.workday.com/node/176443)
 * [Dicas de configuração de geração do documento de proposta](https://community.workday.com/node/183242)
 
-### Suporte Adobe Sign {#adobe-sign-support}
+### Suporte ao Adobe Sign {#adobe-sign-support}
 
 O Adobe Sign é o parceiro da integração e deve ser contatado em caso de falha da integração ao obter assinaturas, ou em caso de falha de notificação de assinaturas pendentes.
 
-Os clientes da Adobe Sign devem entrar em contato com o Gerente de sucesso do cliente para obter suporte. Em alternativa, [!UICONTROL Suporte técnico para Adobe] pode ser acessado por telefone: 1-866-318-4100, aguarde a lista de produtos e insira: 4 e 2 (conforme solicitado).
+Os clientes da Adobe Sign devem entrar em contato com o gerente de sucesso do cliente para obter suporte. Em alternativa, [!UICONTROL Suporte técnico Adobe] pode ser contatado por telefone: 1-866-318-4100, aguarde a lista de produtos e digite: 4 e depois 2 (conforme solicitado).
 
 * [Adicionar tags de texto da Adobe aos documentos](https://www.adobe.com/go/adobesign_text_tag_guide)
 

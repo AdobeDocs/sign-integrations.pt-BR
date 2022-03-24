@@ -1,25 +1,25 @@
 ---
-title: Integrações Adobe Sign
-description: Saiba como configurar as integrações da Adobe Sign
+title: Integrações com o Adobe Sign
+description: Saiba como configurar as integrações com o Adobe Sign
 audience: External
 products: Adobe Sign
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 25%
+source-wordcount: '121'
+ht-degree: 26%
 
 ---
 
-# Integrações Adobe Sign {#home}
+# Integrações com o Adobe Sign {#home}
 
-![faixa](images/sign-banner.png)
+![banner](images/sign-banner.png)
 
-Saiba como instalar, integrar e usar soluções [!DNL Adobe Sign] para os sistemas, processos e aplicativos existentes de sua organização.
+Saiba como instalar, integrar e usar [!DNL Adobe Sign] soluções para os sistemas, processos e aplicativos existentes da sua organização.
 
 ## Artigos em destaque
 
@@ -37,12 +37,12 @@ Saiba como instalar, integrar e usar soluções [!DNL Adobe Sign] para os sistem
   </td>
   <td>
     <a href="workday/tutorial-video.md">
-    <img alt="Integrando o Adobe Sign com o [!DNL Workday]" src="images/wd-integration.png"/>
+    <img alt="Integração do Adobe Sign com [!DNL Workday]" src="images/wd-integration.png"/>
     </a>
     <div>
-    <a href="workday/tutorial-video.md"><strong>Integrando o Adobe Sign com o [!DNL Workday]</strong></a>
+    <a href="workday/tutorial-video.md"><strong>Integração do Adobe Sign com [!DNL Workday]</strong></a>
     </div>
-    <em>Saiba como configurar o Adobe Sign para trabalhar no [!DNL Workday] para gerenciar todos os seus documentos</em>
+    <em>Saiba como configurar o Adobe Sign para trabalhar no [!DNL Workday] para gerenciar todos os documentos</em>
   </td>
   <td>
     <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all">
@@ -51,7 +51,7 @@ Saiba como instalar, integrar e usar soluções [!DNL Adobe Sign] para os sistem
     <div>
     <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Comunidade de suporte da Adobe Sign</strong></a>
     </div>
-    <em>Faça perguntas, compartilhe feedback e dicas ou discuta sobre os produtos e serviços de integração do Sign com outros usuários e entusiastas da Adobe Sign.</em>
+    <em>Faça perguntas, compartilhe feedback e dicas ou discuta sobre os produtos e serviços de integração do Sign com outros usuários e entusiastas do Adobe Sign.</em>
     <br>
   </td>
 </tr>
