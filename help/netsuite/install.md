@@ -4,11 +4,11 @@ description: Adobe Sign para [!DNL NetSuite] - Guia de instalação e personaliz
 product: Adobe Sign
 locnotes: All languages; screenshots for Tier 1 and 2 only (see the currently published localized page for guidance)
 type: Documentation
-solution: Acrobat Sign, Adobe Sign
+solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
+source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '4870'
 ht-degree: 1%
@@ -251,7 +251,7 @@ O pacote de integração do Adobe Sign permite receber atualizações automatica
 
 ## Objetos e tipos de registro {#objects}
 
-O pacote de integração do Adobe Sign já expõe o objeto Contrato do Adobe Sign com muitos [!DNL NetSuite] objetos, incluindo: Registros de clientes, estimativas, clientes potenciais, oportunidades e parceiros. Você também pode usar o pacote do Adobe Sign com outros tipos de registro, incluindo registros personalizados.
+O pacote de integração do Adobe Sign já expõe o objeto Contrato do Adobe Sign com muitos [!DNL NetSuite] objetos, incluindo: Registros de clientes, estimativas, clientes potenciais, oportunidades e parceiros. Você também pode usar o pacote Adobe Sign com outros tipos de registro, incluindo registros personalizados.
 
 A guia Contrato pode ser exibida com dois tipos de [!DNL NetSuite] registros: Registros de entidade e de transação. Geralmente, presumimos que um registro de Transação é um registro (como cotação) que pode ser convertido em um documento PDF; Considerando que um registro de Entidade não pode ser convertido em um PDF.
 
