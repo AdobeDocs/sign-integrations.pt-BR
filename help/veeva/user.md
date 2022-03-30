@@ -9,7 +9,7 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 2%
@@ -56,7 +56,7 @@ Para enviar um contrato usando o Adobe Acrobat Sign para Veeva:
 
    ![](images/choose-document-type.png)
 
-1. Selecionar **[!UICONTROL OK]** para fechar a caixa de diálogo.
+1. Para fechar a caixa de diálogo, selecione **[!UICONTROL OK]**.
 
 1. Selecionar **[!UICONTROL Próximo]**.
 
@@ -117,7 +117,7 @@ Para enviar um contrato usando o Adobe Acrobat Sign para Veeva:
 
 1. Depois que todas as assinaturas são capturadas e concluídas no Adobe Acrobat Sign, o Status do documento no Vault muda para [!UICONTROL Aprovado].
 
-1. Selecionar **[!UICONTROL Arquivos de documentos]** e expandir a **[!UICONTROL Representações]** no Vault. Ele cria automaticamente uma nova Representação chamada &quot;Adobe Sign Rendition&quot; quando o documento está no estado Aprovado.
+1. Selecionar **[!UICONTROL Arquivos de documentos]** e expandir a **[!UICONTROL Representações]** no Vault. Ele cria automaticamente uma Representação chamada &quot;Adobe Sign Rendition&quot; quando o documento está no estado Aprovado.
 
    ![](images/document-files.png)
 

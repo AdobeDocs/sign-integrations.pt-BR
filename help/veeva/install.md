@@ -10,9 +10,9 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
-source-wordcount: '3573'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ As etapas de alto nível para concluir a integração são:
 
 ## Configure [!DNL Veeva Vault] {#configure-veeva}
 
-Para configurar [!DNL Veeva Vault] para integração com o Adobe Acrobat Sign, você precisa implementar as etapas listadas abaixo.
+Para configurar [!DNL Veeva Vault] para integração com o Adobe Acrobat Sign, você deve implementar as etapas listadas abaixo.
 
 ### Etapa 1. Criar grupo {#create-group}
 
@@ -210,7 +210,7 @@ Quando você implanta o pacote do Adobe Acrobat Sign, ele cria um registro de Gr
 
 ![Imagem de grupos de tipos de documento](images/document-type-groups.png)
 
-Você precisa adicionar esse grupo de tipos de documento para todas as classificações de documento qualificadas para o processo do Adobe Acrobat Sign. Como a propriedade de grupo de tipo de documento não é herdada do tipo para o subtipo nem do subtipo para o nível de classificação, ela deve ser definida para cada classificação de documento elegível para o Adobe Acrobat Sign.
+Você deve adicionar esse grupo de tipos de documento para todas as classificações de documento qualificadas para o processo do Adobe Acrobat Sign. Como a propriedade de grupo de tipo de documento não é herdada do tipo para o subtipo nem do subtipo para o nível de classificação, ela deve ser definida para cada classificação de documento elegível para o Adobe Acrobat Sign.
 
 ![Imagem dos detalhes de edição do documento](images/document-edit-details.png)
 
@@ -222,7 +222,7 @@ Você precisa adicionar esse grupo de tipos de documento para todas as classific
 
 ### Etapa 6. Criar Configuração de Função de Usuário {#create-user-role-setup}
 
-Depois que o(s) ciclo(s) de vida estiver(em) configurado(s) corretamente, o sistema deve garantir que o usuário administrador do Adobe Sign seja adicionado pelo DAC para todos os documentos qualificados para o processo do Adobe Acrobat Sign. Isso é feito criando o registro apropriado de Configuração de função de usuário que especifica:
+Depois que os ciclos de vida são configurados corretamente, o sistema deve garantir que o usuário administrador do Adobe Sign seja adicionado pelo DAC para todos os documentos qualificados para o processo do Adobe Acrobat Sign. Isso é feito criando o registro apropriado de Configuração de função de usuário que especifica:
 
 * Tipo de documento Grupo como documento do Adobe Sign
 * Função do aplicativo como função de administrador do Adobe Sign
@@ -255,7 +255,7 @@ Para configurar Campos de documento:
 
    ![Imagem](images/use-shared-fields.png)
 
-1. Observe que ambos os campos devem ter uma segurança específica que permita que apenas os membros do Adobe Sign Admin Group atualizem seus valores.
+1. Ambos os campos devem ter uma segurança específica que permita que apenas membros do Adobe Sign Admin Group atualizem seus valores.
 
    ![Imagem](images/security-overrides.png)
 
