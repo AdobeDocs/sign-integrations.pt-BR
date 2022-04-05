@@ -9,7 +9,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 2%
@@ -86,7 +86,7 @@ Para enviar um contrato usando o Adobe Acrobat Sign para Veeva:
 
    ![](images/select-adobe-sign.png)
 
-1. Se o recurso UMG (Usuários em vários grupos) estiver ativado na conta do Adobe Acrobat Sign e o remetente pertencer a vários grupos, você verá uma caixa de diálogo conforme mostrado abaixo. Na caixa de diálogo, selecione o grupo e, em seguida, selecione **[!UICONTROL OK]**.
+1. Se o recurso UMG (Usuários em vários grupos) estiver ativado na conta do Adobe Acrobat Sign e o remetente pertencer a vários grupos, você verá uma caixa de diálogo conforme mostrado abaixo. Na caixa de diálogo, selecione o grupo e, em seguida, selecione **[!UICONTROL Próximo]**.
 
    ![](images/umg-dialog.png)
 

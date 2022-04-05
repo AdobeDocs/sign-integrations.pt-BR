@@ -251,7 +251,7 @@ O pacote de integração do Adobe Sign permite receber atualizações automatica
 
 ## Objetos e tipos de registro {#objects}
 
-O pacote de integração do Adobe Sign já expõe o objeto Contrato do Adobe Sign com muitos [!DNL NetSuite] objetos, incluindo: Registros de clientes, estimativas, clientes potenciais, oportunidades e parceiros. Você também pode usar o pacote Adobe Sign com outros tipos de registro, incluindo registros personalizados.
+O pacote de integração do Adobe Sign já expõe o objeto Contrato do Adobe Sign com muitos [!DNL NetSuite] objetos, incluindo: Registros de clientes, estimativas, clientes potenciais, oportunidades e parceiros. Você também pode usar o pacote do Adobe Sign com outros tipos de registro, incluindo registros personalizados.
 
 A guia Contrato pode ser exibida com dois tipos de [!DNL NetSuite] registros: Registros de entidade e de transação. Geralmente, presumimos que um registro de Transação é um registro (como cotação) que pode ser convertido em um documento PDF; Considerando que um registro de Entidade não pode ser convertido em um PDF.
 
