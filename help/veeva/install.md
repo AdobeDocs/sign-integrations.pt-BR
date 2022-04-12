@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1026d696587b898b6e1132ca1a69642d799dcf1d
+source-git-commit: c6c0257204ab45776450f77a5a95291a99371063
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # [!DNL Veeva Vault] Guia de instalação{#veeva-installation-guide}
 
-[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o suporte do Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
 
 ## Visão geral {#overview}
 
@@ -104,7 +104,7 @@ O objeto Signatário é criado para armazenar informações relacionadas aos par
 | --- | --- | ---| --- | 
 | email__c | Email | Sequência de caracteres (120) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | external_id__c | ID do participante | Sequência de caracteres (80) | Contém o identificador exclusivo do participante do Adobe Acrobat Sign |
-| name__v | Nome | Sequência de caracteres (128) | Mantém o nome do participante da Adobe Acrobat Sign |
+| name__v | Nome | Sequência de caracteres (128) | Mantém o nome do participante do Adobe Acrobat Sign |
 | order__c | Ordem | Número | Contém o número do pedido do participante do contrato do Adobe Acrobat Sign |
 | role__c | Função | Sequência de caracteres (30) | Mantém a função do participante do contrato do Adobe Acrobat Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
@@ -129,7 +129,7 @@ Campos de objeto do evento de assinatura
 | name__v | Nome | Sequência de caracteres | Nome do evento gerado automaticamente |
 | participant_comment__c | Comentário do participante | Sequência de caracteres | Mantém o comentário do participante do Adobe Acrobat Sign, se houver |
 | participant_email__c | Email do participante | Sequência de caracteres | Contém o email do participante do Adobe Acrobat Sign |
-| participant_role__c | Função do participante | Sequência de caracteres | Mantém a função do participante do Adobe Acrobat Sign |
+| participant_role__c | Função do participante | Sequência de caracteres | Tem a função de participante do Adobe Acrobat Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
 | external_id__c | ID Externa | Texto (200) | Identificador de Evento do Contrato de Retenção gerado pelo Adobe Sign. |
 
@@ -150,11 +150,11 @@ AgreementsEventsProcessingJob: Esta tarefa garante que todos os Documentos com r
 Campos de Objeto de Log de Tarefas de Integração do Adobe Sign
 
 | Campo | Rótulo | Tipo | Descrição |
-|---|---|---|---| 
+|:--|:--|:--|:---------| 
 | start_date__c | Data de início | DataHora | Data de início da tarefa |
 | end_date__c | Data de término | DataHora | Data de Término da Tarefa |
-| task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: Concluído (task_completed__c) Concluído com Erros (task_completed_with_errors__c) Falha (task_failed__c) |
-| task_type__c | Tipo de Tarefa | Lista de seleção | Tipo de tarefa de retenção: Sincronização de eventos dos contratos (agreements_events_synchronization__c) Processamento de eventos dos contratos (agreements_events_processing__c) |
+| task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: <br><br> Concluído (task_completed__c) <br><br> Concluído com Erros (task_completed_with_errors__c) <br><br> Falha (task_failed__c) |
+| task_type__c | Tipo de Tarefa | Lista de seleção | Tipo de tarefa de retenção: <br><br> Sincronização de eventos dos contratos (agreements_events_synchronization__c) <br><br> Processamento de Eventos de Acordos (agreements_events_processing__c) |
 | messages__c | Mensagem | Longo (32000) | Retém a mensagem da tarefa |
 
 ![Imagem dos detalhes do objeto do log de tarefas](images/task-log.png)
@@ -299,7 +299,7 @@ O novo tipo de representação chamado *Representação original (original_rendi
 
 ### Etapa 9. Atualizar ações da Web {#web-actions}
 
-A integração do Adobe Acrobat Sign e do Vault exige que você crie e configure as duas ações da Web a seguir:
+A integração do Adobe Acrobat Sign com o Vault exige que você crie e configure as duas ações da Web a seguir:
 
 * **Criar Adobe Sign**: Ele cria ou exibe o Contrato do Adobe Acrobat Sign.
 
@@ -357,7 +357,7 @@ Para atualizar o ciclo de vida do documento, siga as etapas abaixo:
 
    Quando um documento do Vault é enviado para o Adobe Acrobat Sign, seu estado deve corresponder ao estado em que o contrato está. Para fazer isso, adicione os seguintes estados em cada ciclo de vida usado por documentos qualificados para assinatura Adobe:
 
-   * **Antes da assinatura do Adobe** (Revisado): É um nome de espaço reservado para o estado a partir do qual o documento pode ser enviado ao Adobe Acrobat Sign. Com base no tipo de documento, ele pode ser Estado de rascunho ou Revisado. O rótulo de estado do documento pode ser personalizado de acordo com os requisitos do cliente. Antes da assinatura do Adobe, o estado deve definir as duas seguintes ações do usuário:
+   * **Antes da assinatura do Adobe** (Revisado): Este é um nome de espaço reservado para o estado a partir do qual o documento pode ser enviado ao Adobe Acrobat Sign. Com base no tipo de documento, ele pode ser Estado de rascunho ou Revisado. O rótulo de estado do documento pode ser personalizado de acordo com os requisitos do cliente. Antes da assinatura do Adobe, o estado deve definir as duas seguintes ações do usuário:
 
       * Ação que altera o estado do documento para *No Adobe Sign Draft* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento de qualquer ciclo de vida.
       * Ação que chama a Ação da Web &quot;Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função de administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar origem, gerenciar representação visível e alterar estado.
@@ -442,7 +442,7 @@ Você deve definir as permissões apropriadas para cada Função de Usuário no 
 
 ## Conectar [!DNL Veeva Vault] para o Adobe Acrobat Sign usando middleware {#connect-middleware}
 
-Depois de concluir a configuração para [!DNL Veeva Vault] e a conta de administrador do Adobe Acrobat Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão da conta do Adobe Acrobat Sign é iniciada pela identidade do Adobe Acrobat Sign e, em seguida, é usada para armazenar[!DNL Veeva Vault] identidade.
+Depois de concluir a configuração para [!DNL Veeva Vault] e a conta de administrador do Adobe Acrobat Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão de conta da Adobe Acrobat Sign é iniciada pela Adobe Acrobat Sign Identity e, em seguida, é usada para armazenar o[!DNL Veeva Vault] identidade.
 Para segurança e estabilidade do sistema, o administrador deve usar um [!DNL Veeva Vault] conta de sistema/serviço/utilitário, como `adobe.for.veeva@xyz.com`, em vez de uma conta de usuário pessoal, como `bob.smith@xyz.com`.
 
 Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo para se conectar [!DNL Veeva Vault] para o Adobe Acrobat Sign usando middleware:
