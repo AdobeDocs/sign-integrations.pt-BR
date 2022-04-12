@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 5481293e84bd72e09df2c2f4b5ce27c5fdea28d0
+source-git-commit: 6b06bb8562ea7464fdbc23a25a4be3572eccdd1e
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -46,7 +46,7 @@ Para configurar [!DNL Veeva Vault] para integração com o Adobe Acrobat Sign, v
 
 ### Etapa 1. Criar grupo {#create-group}
 
-Para configurar o Adobe Acrobat Sign para [!DNL Vault], um novo grupo chamado *Adobe Sign Admin Group* é criado. Esse grupo é usado para definir a segurança de nível de campo do documento para campos relacionados ao Adobe Acrobat Sign e deve incluir *Perfil de integração do Adobe Sign* por padrão.
+Para configurar o Adobe Acrobat Sign para [!DNL Vault], um novo grupo chamado *Adobe Sign Admin Group* é criado. Este grupo é usado para definir a segurança de nível de campo do documento para campos relacionados ao Adobe Acrobat Sign e deve incluir *Perfil de integração do Adobe Sign* por padrão.
 
 ![Imagem dos detalhes do evento de assinatura](images/create-admin-group.png)
 
@@ -77,7 +77,7 @@ O objeto de assinatura é criado para armazenar informações relacionadas ao co
 
 **Campos de objeto de assinatura**
 
-| Campo | Rótulo | Tipo | Descrição |
+| Campo | Rótulo | Tipo | Descrição         |
 |:---|:---|:---|:------- | 
 | external_id__c | ID do contrato | Sequência de caracteres (100) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | file_hash__c | Hash de Arquivo | Sequência de caracteres (50) | Contém a soma de verificação md5 do arquivo que foi enviado para o Adobe Acrobat Sign |
@@ -235,7 +235,7 @@ Quando você implanta o pacote do Adobe Acrobat Sign, ele cria um registro de Gr
 
 ![Imagem de grupos de tipos de documento](images/document-type-groups.png)
 
-Você deve adicionar esse grupo de tipos de documento para todas as classificações de documento qualificadas para o processo do Adobe Acrobat Sign. Como a propriedade de grupo de tipo de documento não é herdada do tipo para o subtipo nem do subtipo para o nível de classificação, ela deve ser definida para cada classificação de documento elegível para o Adobe Acrobat Sign.
+Você deve adicionar este grupo de tipos de documento para todas as classificações de documento elegíveis para o processo do Adobe Acrobat Sign. Como a propriedade de grupo de tipo de documento não é herdada do tipo para o subtipo nem do subtipo para o nível de classificação, ela deve ser definida para cada classificação de documento elegível para o Adobe Acrobat Sign.
 
 ![Imagem dos detalhes de edição do documento](images/document-edit-details.png)
 
@@ -490,7 +490,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Para permitir o provisionamento automático de usuários no Adobe Acrobat Sign, marque a caixa de seleção **[!UICONTROL Provisionamento automático de usuários do Sign]**.
 
-   **Observação:** O Provisionamento automático de novos usuários do Adobe Acrobat Sign funciona somente se tiver sido ativado no nível de conta do Adobe Acrobat Sign no Adobe Acrobat Sign, além de ativar **[!UICONTROL Provisionamento automático de usuários do Sign]** para[!DNL Veeva Vault] Integração do Adobe Acrobat Sign conforme mostrado abaixo pelo administrador de conta do Adobe Acrobat Sign.
+   **Observação:** O Provisionamento automático de novos usuários do Adobe Acrobat Sign funciona somente se tiver sido ativado no nível de conta do Adobe Acrobat Sign no Adobe Acrobat Sign, além de ativar **[!UICONTROL Provisionamento automático de usuários do Sign]** para[!DNL Veeva Vault] Integração com o Adobe Acrobat Sign, conforme mostrado abaixo pelo administrador de conta do Adobe Acrobat Sign.
 
    ![Imagem](images/allow-auto-provisioning.png)
 
@@ -500,7 +500,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Selecionar **[!UICONTROL Salvar]** para salvar a nova conexão.
 
-   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e o Adobe Acrobat Sign.
+   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e Adobe Acrobat Sign.
 
    ![Imagem](images/middleware_setup.png)
 
