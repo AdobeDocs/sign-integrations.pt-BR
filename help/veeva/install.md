@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c6c0257204ab45776450f77a5a95291a99371063
+source-git-commit: 5481293e84bd72e09df2c2f4b5ce27c5fdea28d0
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Este documento explica como estabelecer integração do Adobe Acrobat Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) desenvolvida para ciências biológicas. Um &quot;Cofre&quot; é um repositório de dados e conteúdo com uso típico para registros normativos, relatórios de pesquisa, aplicativos de concessões, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
+Este documento explica como estabelecer a integração do Adobe Acrobat Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) desenvolvida para ciências biológicas. Um &quot;Cofre&quot; é um repositório de dados e conteúdo com uso típico para registros normativos, relatórios de pesquisa, aplicativos de concessões, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
 
 As etapas de alto nível para concluir a integração são:
 
@@ -78,7 +78,7 @@ O objeto de assinatura é criado para armazenar informações relacionadas ao co
 **Campos de objeto de assinatura**
 
 | Campo | Rótulo | Tipo | Descrição |
-| --- | --- | ---| --- | 
+|:---|:---|:---|:------- | 
 | external_id__c | ID do contrato | Sequência de caracteres (100) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | file_hash__c | Hash de Arquivo | Sequência de caracteres (50) | Contém a soma de verificação md5 do arquivo que foi enviado para o Adobe Acrobat Sign |
 | name__v | Nome | Sequência de caracteres (128) | Mantém o nome do contrato |
@@ -101,7 +101,7 @@ O objeto Signatário é criado para armazenar informações relacionadas aos par
 **Campos de objeto do signatário**
 
 | Campo | Rótulo | Tipo | Descrição |
-| --- | --- | ---| --- | 
+|:---|:---|:---|:------- | 
 | email__c | Email | Sequência de caracteres (120) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | external_id__c | ID do participante | Sequência de caracteres (80) | Contém o identificador exclusivo do participante do Adobe Acrobat Sign |
 | name__v | Nome | Sequência de caracteres (128) | Mantém o nome do participante do Adobe Acrobat Sign |
@@ -120,7 +120,7 @@ O objeto Evento de assinatura é criado para armazenar informações relacionada
 Campos de objeto do evento de assinatura
 
 | Campo | Rótulo | Tipo | Descrição |
-| --- | --- | ---| --- | 
+|:---|:---|:---|:-------- | 
 | acting_user_email__c | Email do usuário em ação | Sequência de caracteres | Contém o email do usuário do Adobe Acrobat Sign que executou a ação que gerou o evento |
 | acting_user_name__c | Nome de usuário ativo | Sequência de caracteres | Contém o nome do usuário do Adobe Acrobat Sign que executou a ação que gerou o evento |
 | descrição__c | Descrição | Sequência de caracteres | Contém a descrição do evento do Adobe Acrobat Sign |
@@ -153,8 +153,8 @@ Campos de Objeto de Log de Tarefas de Integração do Adobe Sign
 |:--|:--|:--|:---------| 
 | start_date__c | Data de início | DataHora | Data de início da tarefa |
 | end_date__c | Data de término | DataHora | Data de Término da Tarefa |
-| task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: <br><br> Concluído (task_completed__c) <br><br> Concluído com Erros (task_completed_with_errors__c) <br><br> Falha (task_failed__c) |
-| task_type__c | Tipo de Tarefa | Lista de seleção | Tipo de tarefa de retenção: <br><br> Sincronização de eventos dos contratos (agreements_events_synchronization__c) <br><br> Processamento de Eventos de Acordos (agreements_events_processing__c) |
+| task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: <br><br> Concluído (task_completed__c) Concluído com Erros (task_completed_with_errors__c) Falha (task_failed__c) |
+| task_type__c | Tipo de Tarefa | Lista de seleção | Tipo de tarefa de retenção: <br><br> Sincronização de eventos dos contratos (agreements_events_synchronization__c) Processamento de eventos dos contratos (agreements_events_processing__c) |
 | messages__c | Mensagem | Longo (32000) | Retém a mensagem da tarefa |
 
 ![Imagem dos detalhes do objeto do log de tarefas](images/task-log.png)
@@ -357,7 +357,7 @@ Para atualizar o ciclo de vida do documento, siga as etapas abaixo:
 
    Quando um documento do Vault é enviado para o Adobe Acrobat Sign, seu estado deve corresponder ao estado em que o contrato está. Para fazer isso, adicione os seguintes estados em cada ciclo de vida usado por documentos qualificados para assinatura Adobe:
 
-   * **Antes da assinatura do Adobe** (Revisado): Este é um nome de espaço reservado para o estado a partir do qual o documento pode ser enviado ao Adobe Acrobat Sign. Com base no tipo de documento, ele pode ser Estado de rascunho ou Revisado. O rótulo de estado do documento pode ser personalizado de acordo com os requisitos do cliente. Antes da assinatura do Adobe, o estado deve definir as duas seguintes ações do usuário:
+   * **Antes da assinatura do Adobe** (Revisado): É um nome de espaço reservado para o estado a partir do qual o documento pode ser enviado ao Adobe Acrobat Sign. Com base no tipo de documento, ele pode ser Estado de rascunho ou Revisado. O rótulo de estado do documento pode ser personalizado de acordo com os requisitos do cliente. Antes da assinatura do Adobe, o estado deve definir as duas seguintes ações do usuário:
 
       * Ação que altera o estado do documento para *No Adobe Sign Draft* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento de qualquer ciclo de vida.
       * Ação que chama a Ação da Web &quot;Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função de administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar origem, gerenciar representação visível e alterar estado.
@@ -500,7 +500,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Selecionar **[!UICONTROL Salvar]** para salvar a nova conexão.
 
-   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e Adobe Acrobat Sign.
+   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e o Adobe Acrobat Sign.
 
    ![Imagem](images/middleware_setup.png)
 
