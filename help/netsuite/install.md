@@ -8,7 +8,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
+source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
 ht-degree: 1%
@@ -581,7 +581,7 @@ NÃO desinstale o pacote se precisar manter seus contratos não assinados.
 
 ## Solução de problemas
 
-### Determine o andamento da atualização  {#determineprogress}
+### Determine o andamento da atualização {#determineprogress}
 
 Se a atualização parecer estar levando mais tempo do que o necessário, você pode verificar a subguia Log de execução do script de instalação do pacote Adobe Sign para determinar o andamento da atualização da seguinte maneira:
 
