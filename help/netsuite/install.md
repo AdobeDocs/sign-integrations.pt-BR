@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
+source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
 workflow-type: tm+mt
-source-wordcount: '4873'
+source-wordcount: '4870'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Consulte [Criar um contrato do Adobe Sign](#createagreement) para obter mais inf
 
 1. Se você já for uma conta de cliente da Adobe Sign, siga as etapas para  [Configurar o OAuth após a instalação ou atualização](#oauth).
 
-   Se você não tiver uma conta da Adobe Sign, poderá [cadastrar-se para obter uma avaliação corporativa](https://esign.adobe.com/br/adobe-sign-DNL-NetSuite-trial-registration.html) para testar o sistema. Siga as etapas de registro online para ativar sua conta da Adobe Sign.
+   Se você não tiver uma conta da Adobe Sign, poderá [cadastrar-se para obter uma avaliação corporativa](https://esign.adobe.com/adobe-sign-netsuite-trial-registration.html) para testar o sistema. Siga as etapas de registro online para ativar sua conta da Adobe Sign.
 
 ## Configurar o OAuth após a instalação ou atualização {#oauth}
 
@@ -111,13 +111,13 @@ O [!DNL NetSuite] o administrador que configura o OAuth também deve ter acesso 
    >Ao configurar o OAuth em sua conta do Sandbox, você pode encontrar o erro &quot;Não foi possível determinar a ID de composição do cliente&quot; quando a autorização é concluída.
    >
    >
-   >Para continuar, você deve alterar a parte de domínio da conta do URL (sistema.[!DNL NetSuite].com) em seu navegador para apontar de volta para o [!DNL NetSuite] Sandbox, como se segue:
+   >Para continuar, você deve alterar a parte de domínio da conta do URL (system.netsuite.com) no navegador para apontar de volta para o [!DNL NetSuite] Sandbox, como se segue:
    >
    >
    >Alterar:
    >
    >
-   >sistema.[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >system.netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
    >
    >
    >Para:
@@ -581,7 +581,7 @@ NÃO desinstale o pacote se precisar manter seus contratos não assinados.
 
 ## Solução de problemas
 
-### Determine o andamento da atualização
+### Determine o andamento da atualização  {#determineprogress}
 
 Se a atualização parecer estar levando mais tempo do que o necessário, você pode verificar a subguia Log de execução do script de instalação do pacote Adobe Sign para determinar o andamento da atualização da seguinte maneira:
 
