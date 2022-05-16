@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
 workflow-type: tm+mt
-source-wordcount: '4871'
+source-wordcount: '4873'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Adobe Sign para [!DNL NetSuite] fornece uma integração completa de assinatura eletrônica com [!DNL NetSuite]. Você pode usar o Adobe Sign para [!DNL NetSuite] integração para enviar contratos, cotações e outros documentos, que exigem assinaturas eletrônicas, para destinatários diretamente do [!DNL NetSuite]. Você pode criar e enviar contratos do Adobe Sign de clientes, clientes potenciais, cotações e outros [!DNL NetSuite] registros. Atualizações do Adobe Sign [!DNL NetSuite] com o status dos contratos e armazena os contratos com os [!DNL NetSuite] registros quando forem executados. Você pode exibir o histórico de todos os contratos enviados de [!DNL NetSuite] dentro do produto.
 
-Consulte o [Adobe Sign para [!DNL NetSuite] notas de versão](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) para obter mais informações.
+Consulte o [Notas de versão do Adobe Sign para NetSuite](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) para obter mais informações.
 
 ## Instalar o pacote e configurar o OAuth {#install}
 
@@ -66,7 +66,7 @@ Consulte [Criar um contrato do Adobe Sign](#createagreement) para obter mais inf
 
 1. Se você já for uma conta de cliente da Adobe Sign, siga as etapas para  [Configurar o OAuth após a instalação ou atualização](#oauth).
 
-   Se você não tiver uma conta da Adobe Sign, poderá [cadastrar-se para obter uma avaliação corporativa](https://esign.adobe.com/adobe-sign-[!DNL NetSuite]-trial-registration.html) para testar o sistema. Siga as etapas de registro online para ativar sua conta da Adobe Sign.
+   Se você não tiver uma conta da Adobe Sign, poderá [cadastrar-se para obter uma avaliação corporativa](https://esign.adobe.com/br/adobe-sign-DNL-NetSuite-trial-registration.html) para testar o sistema. Siga as etapas de registro online para ativar sua conta da Adobe Sign.
 
 ## Configurar o OAuth após a instalação ou atualização {#oauth}
 
@@ -123,7 +123,7 @@ O [!DNL NetSuite] o administrador que configura o OAuth também deve ter acesso 
    >Para:
    >
    >
-   >sistema.**sandbox.**[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >sistema.**sandbox.** netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
 
 ## Atualizar o pacote (usuários existentes)
 
@@ -355,7 +355,7 @@ Mais [!DNL NetSuite] as funções devem ter permissão para usar o Adobe Sign se
 
    >[!NOTE]
    >
-   >Consulte o *[Configurando uma lista de permissões para um tipo de registro personalizado](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* tópico no Centro de Ajuda do NetSuite para obter mais informações
+   >Consulte o *[Configurando uma lista de permissões para um tipo de registro personalizado](https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N2879931.html)* tópico no Centro de Ajuda do NetSuite para obter mais informações
 
    1. Selecione a função no menu *Função* lista.
    1. Definir *Nível* para **[!UICONTROL Completo]**.
@@ -573,7 +573,7 @@ Após a assinatura do contrato:
 
 ## Desinstale o pacote
 
-Para desinstalar o pacote, siga as etapas fornecidas no [!DNL NetSuite] Ajuda. Consulte o *[Desinstalando um pacote](https://docs.oracle.com/cloud/latest/[!DNL NetSuite]cs_gs/NSBDL/NSBDL.pdf)* tópico no [!DNL NetSuite] Centro de Ajuda para obter mais informações.
+Para desinstalar o pacote, siga as etapas fornecidas no [!DNL NetSuite] Ajuda. Consulte o *[Desinstalando um pacote](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3400972.html)* tópico no [!DNL NetSuite] Centro de Ajuda para obter mais informações.
 
 Quando você desinstala o pacote, os contratos não assinados são excluídos. Os contratos assinados e seus arquivos de PDF de auditoria correspondentes não são afetados.
 
