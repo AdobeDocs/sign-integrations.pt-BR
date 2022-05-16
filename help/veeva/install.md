@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 6b06bb8562ea7464fdbc23a25a4be3572eccdd1e
+source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Este documento explica como estabelecer a integração do Adobe Acrobat Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) desenvolvida para ciências biológicas. Um &quot;Cofre&quot; é um repositório de dados e conteúdo com uso típico para registros normativos, relatórios de pesquisa, aplicativos de concessões, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
+Este documento explica como estabelecer integração do Adobe Acrobat Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) desenvolvida para ciências biológicas. Um &quot;Cofre&quot; é um repositório de dados e conteúdo com uso típico para registros normativos, relatórios de pesquisa, aplicativos de concessões, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
 
 As etapas de alto nível para concluir a integração são:
 
@@ -40,7 +40,7 @@ As etapas de alto nível para concluir a integração são:
 >
 >O administrador do Adobe Sign deve executar as etapas de configuração do Adobe Acrobat Sign no Adobe Acrobat Sign.
 
-## Configure [!DNL Veeva Vault] {#configure-veeva}
+## Configurar [!DNL Veeva Vault] {#configure-veeva}
 
 Para configurar [!DNL Veeva Vault] para integração com o Adobe Acrobat Sign, você deve implementar as etapas listadas abaixo.
 
@@ -77,14 +77,14 @@ O objeto de assinatura é criado para armazenar informações relacionadas ao co
 
 **Campos de objeto de assinatura**
 
-| Campo | Rótulo | Tipo | Descrição         |
+| Campo | Rótulo | Tipo | Descrição |
 |:---|:---|:---|:------- | 
 | external_id__c | ID do contrato | Sequência de caracteres (100) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | file_hash__c | Hash de Arquivo | Sequência de caracteres (50) | Contém a soma de verificação md5 do arquivo que foi enviado para o Adobe Acrobat Sign |
 | name__v | Nome | Sequência de caracteres (128) | Mantém o nome do contrato |
 | sender__c | Remetente | Objeto (Usuário) | Mantém a referência ao usuário do Vault que criou o contrato |
 | signature_status__c | Status da assinatura | Sequência de caracteres (75) | Mantém o status do contrato no Adobe Acrobat Sign |
-| signature_type__c | Tipo de assinatura | Sequência de caracteres (20) | Mantém o tipo de assinatura do contrato no Adobe Acrobat Sign (escrito ou ESIGN) |
+| signature_type__c | Tipo de assinatura | Sequência de caracteres (20) | Contém o tipo de assinatura do contrato no Adobe Acrobat Sign (MANUSCRITA ou ESIGN) |
 | start_date__c | Data de início | DataHora | Data em que o contrato foi enviado para assinatura |
 | cancellation_date__c | Data de cancelamento | DataHora | Mantém a data em que o contrato foi cancelado. |
 | completed_date__c | Data de conclusão | DataHora | Mantém a data em que o contrato foi concluído. |
@@ -104,7 +104,7 @@ O objeto Signatário é criado para armazenar informações relacionadas aos par
 |:---|:---|:---|:------- | 
 | email__c | Email | Sequência de caracteres (120) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | external_id__c | ID do participante | Sequência de caracteres (80) | Contém o identificador exclusivo do participante do Adobe Acrobat Sign |
-| name__v | Nome | Sequência de caracteres (128) | Mantém o nome do participante do Adobe Acrobat Sign |
+| name__v | Nome | Sequência de caracteres (128) | Mantém o nome do participante da Adobe Acrobat Sign |
 | order__c | Ordem | Número | Contém o número do pedido do participante do contrato do Adobe Acrobat Sign |
 | role__c | Função | Sequência de caracteres (30) | Mantém a função do participante do contrato do Adobe Acrobat Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
@@ -153,7 +153,7 @@ Campos de Objeto de Log de Tarefas de Integração do Adobe Sign
 |:--|:--|:--|:---------| 
 | start_date__c | Data de início | DataHora | Data de início da tarefa |
 | end_date__c | Data de término | DataHora | Data de Término da Tarefa |
-| task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: <br><br> Concluído (task_completed__c) Concluído com Erros (task_completed_with_errors__c) Falha (task_failed__c) |
+| task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: <br /> Concluído (task_completed__c) Concluído com Erros (task_completed_with_errors__c) Falha (task_failed__c) |
 | task_type__c | Tipo de Tarefa | Lista de seleção | Tipo de tarefa de retenção: <br><br> Sincronização de eventos dos contratos (agreements_events_synchronization__c) Processamento de eventos dos contratos (agreements_events_processing__c) |
 | messages__c | Mensagem | Longo (32000) | Retém a mensagem da tarefa |
 
@@ -299,7 +299,7 @@ O novo tipo de representação chamado *Representação original (original_rendi
 
 ### Etapa 9. Atualizar ações da Web {#web-actions}
 
-A integração do Adobe Acrobat Sign com o Vault exige que você crie e configure as duas ações da Web a seguir:
+A integração do Adobe Acrobat Sign e do Vault exige que você crie e configure as duas ações da Web a seguir:
 
 * **Criar Adobe Sign**: Ele cria ou exibe o Contrato do Adobe Acrobat Sign.
 
@@ -442,7 +442,7 @@ Você deve definir as permissões apropriadas para cada Função de Usuário no 
 
 ## Conectar [!DNL Veeva Vault] para o Adobe Acrobat Sign usando middleware {#connect-middleware}
 
-Depois de concluir a configuração para [!DNL Veeva Vault] e a conta de administrador do Adobe Acrobat Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão de conta da Adobe Acrobat Sign é iniciada pela Adobe Acrobat Sign Identity e, em seguida, é usada para armazenar o[!DNL Veeva Vault] identidade.
+Depois de concluir a configuração para [!DNL Veeva Vault] e a conta de administrador do Adobe Acrobat Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão da conta do Adobe Acrobat Sign é iniciada pela identidade do Adobe Acrobat Sign e, em seguida, é usada para armazenar[!DNL Veeva Vault] identidade.
 Para segurança e estabilidade do sistema, o administrador deve usar um [!DNL Veeva Vault] conta de sistema/serviço/utilitário, como `adobe.for.veeva@xyz.com`, em vez de uma conta de usuário pessoal, como `bob.smith@xyz.com`.
 
 Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo para se conectar [!DNL Veeva Vault] para o Adobe Acrobat Sign usando middleware:
@@ -490,7 +490,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Para permitir o provisionamento automático de usuários no Adobe Acrobat Sign, marque a caixa de seleção **[!UICONTROL Provisionamento automático de usuários do Sign]**.
 
-   **Observação:** O Provisionamento automático de novos usuários do Adobe Acrobat Sign funciona somente se tiver sido ativado no nível de conta do Adobe Acrobat Sign no Adobe Acrobat Sign, além de ativar **[!UICONTROL Provisionamento automático de usuários do Sign]** para[!DNL Veeva Vault] Integração com o Adobe Acrobat Sign, conforme mostrado abaixo pelo administrador de conta do Adobe Acrobat Sign.
+   **Observação:** O Provisionamento automático de novos usuários do Adobe Acrobat Sign funciona somente se tiver sido ativado no nível de conta do Adobe Acrobat Sign no Adobe Acrobat Sign, além de ativar **[!UICONTROL Provisionamento automático de usuários do Sign]** para[!DNL Veeva Vault] Integração do Adobe Acrobat Sign conforme mostrado abaixo pelo administrador de conta do Adobe Acrobat Sign.
 
    ![Imagem](images/allow-auto-provisioning.png)
 
