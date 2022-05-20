@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c60fd19fa52fb203fd19da69d58792ef6fb88eec
 workflow-type: tm+mt
-source-wordcount: '3909'
+source-wordcount: '3931'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Este documento explica como estabelecer integração do Adobe Acrobat Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) desenvolvida para ciências biológicas. Um &quot;Cofre&quot; é um repositório de dados e conteúdo com uso típico para registros normativos, relatórios de pesquisa, aplicativos de concessões, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
+Este documento explica como estabelecer a integração do Adobe Acrobat Sign com [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] é uma plataforma de ECM (Enterprise Content Management, gerenciamento de conteúdo corporativo) desenvolvida para ciências biológicas. Um &quot;Cofre&quot; é um repositório de dados e conteúdo com uso típico para registros normativos, relatórios de pesquisa, aplicativos de concessões, contratos gerais e muito mais. Uma única empresa pode ter vários &quot;cofres&quot; que devem ser mantidos separadamente.
 
 As etapas de alto nível para concluir a integração são:
 
@@ -129,7 +129,7 @@ Campos de objeto do evento de assinatura
 | name__v | Nome | Sequência de caracteres | Nome do evento gerado automaticamente |
 | participant_comment__c | Comentário do participante | Sequência de caracteres | Mantém o comentário do participante do Adobe Acrobat Sign, se houver |
 | participant_email__c | Email do participante | Sequência de caracteres | Contém o email do participante do Adobe Acrobat Sign |
-| participant_role__c | Função do participante | Sequência de caracteres | Tem a função de participante do Adobe Acrobat Sign |
+| participant_role__c | Função do participante | Sequência de caracteres | Mantém a função do participante do Adobe Acrobat Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
 | external_id__c | ID Externa | Texto (200) | Identificador de Evento do Contrato de Retenção gerado pelo Adobe Sign. |
 
@@ -442,7 +442,7 @@ Você deve definir as permissões apropriadas para cada Função de Usuário no 
 
 ## Conectar [!DNL Veeva Vault] para o Adobe Acrobat Sign usando middleware {#connect-middleware}
 
-Depois de concluir a configuração para [!DNL Veeva Vault] e a conta de administrador do Adobe Acrobat Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão da conta do Adobe Acrobat Sign é iniciada pela identidade do Adobe Acrobat Sign e, em seguida, é usada para armazenar[!DNL Veeva Vault] identidade.
+Depois de concluir a configuração para [!DNL Veeva Vault] e a conta de administrador do Adobe Acrobat Sign, o administrador deve criar uma conexão entre as duas contas usando o middleware. O [!DNL Veeva Vault] e a conexão de conta da Adobe Acrobat Sign é iniciada pela Adobe Acrobat Sign Identity e, em seguida, é usada para armazenar o[!DNL Veeva Vault] identidade.
 Para segurança e estabilidade do sistema, o administrador deve usar um [!DNL Veeva Vault] conta de sistema/serviço/utilitário, como `adobe.for.veeva@xyz.com`, em vez de uma conta de usuário pessoal, como `bob.smith@xyz.com`.
 
 Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo para se conectar [!DNL Veeva Vault] para o Adobe Acrobat Sign usando middleware:
@@ -451,6 +451,10 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 1. Selecionar **[!UICONTROL Login]** no canto superior direito.
 
    ![Imagem de logon de middleware](images/middleware_login.png)
+
+1. Para autorizar o nível de acesso ao aplicativo, selecione o escopo Acrobat Sign OAuth como **[!UICONTROL CONTA]** ou **[!UICONTROL GRUPO]**. Em seguida, selecione **[!UICONTROL Autorizar]**.
+
+   ![Imagem](images/middleware_oauth.png)
 
 1. Na página de logon do Adobe Acrobat Sign que é aberta, forneça o email e a senha do administrador da conta e selecione **[!UICONTROL Fazer logon]**.
 
@@ -480,7 +484,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
    ![Imagem](images/middleware_validated.png)
 
-1. Para restringir o uso a um grupo específico do Adobe Acrobat Sign, expanda a **[!UICONTROL Grupo]** e selecione um dos grupos disponíveis.
+1. Para restringir o uso a um grupo do Adobe Acrobat Sign específico, expanda a **[!UICONTROL Grupo]** e selecione um dos grupos disponíveis.
 
    ![Imagem](images/middleware_group.png)
 
@@ -500,7 +504,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Selecionar **[!UICONTROL Salvar]** para salvar a nova conexão.
 
-   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e Adobe Acrobat Sign.
+   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e o Adobe Acrobat Sign.
 
    ![Imagem](images/middleware_setup.png)
 
