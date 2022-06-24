@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c60fd19fa52fb203fd19da69d58792ef6fb88eec
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '3931'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 # [!DNL Veeva Vault] Guia de instalação{#veeva-installation-guide}
 
-[**Entre em contato com o suporte do Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
 
 ## Visão geral {#overview}
 
@@ -52,7 +52,7 @@ Para configurar o Adobe Acrobat Sign para [!DNL Vault], um novo grupo chamado *A
 
 ### Etapa 2. Implantar o pacote {#deploy-package}
 
-[Implantar o pacote](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip) e siga as etapas. Depois de implantado, o pacote cria:
+[Implantar o pacote](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration-veeva.zip) e siga as etapas. Depois de implantado, o pacote cria:
 
 * Objetos personalizados: Objeto Signature, objeto Signatory, objeto Signature Event, objeto Process Locker
 * Layout da página do objeto de assinatura
@@ -357,7 +357,7 @@ Para atualizar o ciclo de vida do documento, siga as etapas abaixo:
 
    Quando um documento do Vault é enviado para o Adobe Acrobat Sign, seu estado deve corresponder ao estado em que o contrato está. Para fazer isso, adicione os seguintes estados em cada ciclo de vida usado por documentos qualificados para assinatura Adobe:
 
-   * **Antes da assinatura do Adobe** (Revisado): É um nome de espaço reservado para o estado a partir do qual o documento pode ser enviado ao Adobe Acrobat Sign. Com base no tipo de documento, ele pode ser Estado de rascunho ou Revisado. O rótulo de estado do documento pode ser personalizado de acordo com os requisitos do cliente. Antes da assinatura do Adobe, o estado deve definir as duas seguintes ações do usuário:
+   * **Antes da assinatura do Adobe** (Revisado): Este é um nome de espaço reservado para o estado a partir do qual o documento pode ser enviado ao Adobe Acrobat Sign. Com base no tipo de documento, ele pode ser Estado de rascunho ou Revisado. O rótulo de estado do documento pode ser personalizado de acordo com os requisitos do cliente. Antes da assinatura do Adobe, o estado deve definir as duas seguintes ações do usuário:
 
       * Ação que altera o estado do documento para *No Adobe Sign Draft* estado. O nome desta ação do usuário deve ser o mesmo para todos os tipos de documento de qualquer ciclo de vida.
       * Ação que chama a Ação da Web &quot;Adobe Sign&quot;. Esse estado deve ter segurança que permita que a função de administrador do Adobe Sign: exibir documento, exibir conteúdo, editar campos, editar relacionamentos, baixar origem, gerenciar representação visível e alterar estado.
@@ -494,7 +494,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Para permitir o provisionamento automático de usuários no Adobe Acrobat Sign, marque a caixa de seleção **[!UICONTROL Provisionamento automático de usuários do Sign]**.
 
-   **Observação:** O Provisionamento automático de novos usuários do Adobe Acrobat Sign funciona somente se tiver sido ativado no nível de conta do Adobe Acrobat Sign no Adobe Acrobat Sign, além de ativar **[!UICONTROL Provisionamento automático de usuários do Sign]** para[!DNL Veeva Vault] Integração do Adobe Acrobat Sign conforme mostrado abaixo pelo administrador de conta do Adobe Acrobat Sign.
+   **Observação:** O Provisionamento automático de novos usuários do Adobe Acrobat Sign funciona somente se tiver sido ativado no nível de conta do Adobe Acrobat Sign no Adobe Acrobat Sign, além de ativar **[!UICONTROL Provisionamento automático de usuários do Sign]** para[!DNL Veeva Vault] Integração com o Adobe Acrobat Sign, conforme mostrado abaixo pelo administrador de conta do Adobe Acrobat Sign.
 
    ![Imagem](images/allow-auto-provisioning.png)
 
@@ -504,7 +504,7 @@ Um administrador de conta da Adobe Acrobat Sign deve seguir as etapas abaixo par
 
 1. Selecionar **[!UICONTROL Salvar]** para salvar a nova conexão.
 
-   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e o Adobe Acrobat Sign.
+   A nova conexão é exibida na guia Configurações, mostrando uma integração bem-sucedida entre [!DNL Veeva Vault] e Adobe Acrobat Sign.
 
    ![Imagem](images/middleware_setup.png)
 

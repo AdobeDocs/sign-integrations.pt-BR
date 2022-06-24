@@ -9,7 +9,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # Adobe Acrobat Sign para [!DNL Veeva Vault]: Guia do usuário {#veeva-vault-user-guide}
 
-[**Entre em contato com o suporte do Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
 
 Este documento foi criado para ajudar [!DNL Veeva Vault] os clientes aprendem a usar o Adobe Acrobat Sign para [!DNL Veeva Vault] integração para enviar um contrato.
 
@@ -54,11 +54,12 @@ Para enviar um contrato usando o Adobe Acrobat Sign para Veeva:
 
 1. Na caixa de diálogo exibida, selecione **[!UICONTROL Tipo]** como *[!UICONTROL Clínico]* e selecione um **[!UICONTROL Subtipo]** e **[!UICONTROL Classificação]**, se necessário.
 
+
    ![](images/choose-document-type.png)
 
 1. Para fechar a caixa de diálogo, selecione **[!UICONTROL OK]**.
 
-1. Selecionar **[!UICONTROL Próximo]**.
+1. Selecione **[!UICONTROL Próximo]**.
 
 1. Na janela exibida, preencha todos os campos obrigatórios na seção de metadados e selecione **[!UICONTROL Salvar]**.
 
@@ -100,7 +101,7 @@ Para enviar um contrato usando o Adobe Acrobat Sign para Veeva:
 
    ![](images/iFrame-confirm-email.png)
 
-   No entanto, se *Provisionamento automático de usuários do Sign* estiver desativado, a criação do usuário do Adobe Acrobat Sign falha e a janela iFrame exibe uma mensagem solicitando que o usuário entre em contato com o administrador da conta do Adobe Acrobat Sign. O administrador da conta do Adobe Acrobat Sign pode realizar uma das seguintes ações:
+   No entanto, se *Provisionamento automático de usuários do Sign* estiver desativado, a criação do usuário do Adobe Acrobat Sign falha e a janela do iFrame exibe uma mensagem solicitando que o usuário entre em contato com o administrador da conta do Adobe Acrobat Sign. O administrador da conta da Adobe Acrobat Sign pode executar uma das seguintes ações:
 
    * Ative o *Provisionamento automático de usuários do Sign* para a conta.
    * Crie o usuário no Adobe Acrobat Sign antes de usar a integração do Adobe Acrobat Sign do Veeva Vault.
