@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
+source-git-commit: 00db62c894df93abac31bf8196730382d54e8fa0
 workflow-type: tm+mt
-source-wordcount: '4169'
+source-wordcount: '4176'
 ht-degree: 3%
 
 ---
@@ -320,7 +320,7 @@ Quando um usuário opta por um contrato de assinatura digital com as configuraç
 
 Para exibir o conteúdo do documento junto com a assinatura digital e a trilha de auditoria, não selecione &quot;Anexar relatório de auditoria à representação assinada&quot; com &quot;Exibir representação do Acrobat Sign&quot; na interface do usuário do administrador para assinatura digital.
 
-Você pode baixar ou exibir a trilha de auditoria do Adobe como uma representação separada da representação assinada.
+Você pode baixar ou exibir a trilha de auditoria do Adobe como uma representação separada da representação assinada usando o recurso &quot;Reprodução da trilha de auditoria do Adobe&quot;.
 
 ![Imagem](images/audit-trail-rendition-setup-4.png)
 
