@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
+source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
 workflow-type: tm+mt
 source-wordcount: '4169'
 ht-degree: 3%
@@ -289,13 +289,13 @@ Desativar Sobreposições do Vault (disable_vault_overlay__v) é um campo compar
 
 O novo tipo de representação chamado *Adobe Sign Rendition (adobe_sign_rendition__c)* é usado pela integração do Vault para carregar documentos PDF assinados no Adobe Acrobat Sign. Você deve declarar a representação Adobe Sign para cada tipo de documento qualificado para a Assinatura do Adobe Acrobat.
 
-É necessário declarar a representação original para cada tipo de documento qualificado para assinatura do Adobe Acrobat.
-
 ![Imagem de tipos de representação](images/rendition-type.png)
 
 ![Imagem](images/edit-details-clinical.png)
 
 O novo tipo de representação chamado *Representação original* (original_rendition__c) é usado pela integração do Vault como o nome da representação que deve ser usada para armazenar a representação visível original se o documento assinado for importado como representação visível.
+
+É necessário declarar a representação original para cada tipo de documento qualificado para assinatura do Adobe Acrobat.
 
 ![Imagem](images/original-rendition.png)
 
