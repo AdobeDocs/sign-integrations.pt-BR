@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
+source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4169'
 ht-degree: 3%
 
 ---
@@ -289,13 +289,40 @@ Desativar Sobreposições do Vault (disable_vault_overlay__v) é um campo compar
 
 O novo tipo de representação chamado *Adobe Sign Rendition (adobe_sign_rendition__c)* é usado pela integração do Vault para carregar documentos PDF assinados no Adobe Acrobat Sign. Você deve declarar a representação Adobe Sign para cada tipo de documento qualificado para a Assinatura do Adobe Acrobat.
 
+É necessário declarar a representação original para cada tipo de documento qualificado para assinatura do Adobe Acrobat.
+
 ![Imagem de tipos de representação](images/rendition-type.png)
 
 ![Imagem](images/edit-details-clinical.png)
 
-O novo tipo de representação chamado *Representação original (original_rendition__c)* é usado pela integração do Vault como o nome da representação que deve ser usada para armazenar a representação visível original se o documento assinado for importado como representação visível.
+O novo tipo de representação chamado *Representação original* (original_rendition__c) é usado pela integração do Vault como o nome da representação que deve ser usada para armazenar a representação visível original se o documento assinado for importado como representação visível.
 
 ![Imagem](images/original-rendition.png)
+
+Opcionalmente, o cofre pode ter um novo tipo de representação Adobe Audit Trail Rendition (adobe_audit_trail_rendition__c), que é usado pela integração do Vault para armazenar o relatório de trilha de auditoria Adobe.
+
+Siga as etapas abaixo para configurar a representação da trilha de auditoria do Adobe:
+
+1. Ir para **Tipo de representação** > **Criar novo tipo de representação**.
+Crie o novo Tipo de representação como Representação de trilha de auditoria (adobe_audit_trail_rendition__c).
+
+   ![Imagem](images/audit-trail-rendition-setup-1.png)
+
+1. Para exibir e baixar a representação de trilha de auditoria Adobe para o documento, declare *representação da Trilha de Auditoria do Adobe* para cada tipo de documento qualificado para a assinatura do Adobe Acrobat.
+
+   ![Imagem](images/audit-trail-rendition-setup-2.png)
+
+**Observação**: Você pode optar por anexar o relatório de auditoria à representação assinada ativando **[!UICONTROL Anexar relatório de auditoria à representação assinada]** e também exibir a renderização ativando ****[!UICONTROL Exibir representação do Acrobat Sign]**** nas configurações da interface do usuário do administrador.
+
+![Imagem](images/audit-trail-rendition-setup-3.png)
+
+Quando um usuário opta por um contrato de assinatura digital com as configurações acima, uma mensagem (conforme mostrado abaixo) é exibida indicando que o Adobe Acrobat Sign está usando PDF Portfolio para combinar relatórios de PDF e trilha de auditoria assinados digitalmente.
+
+Para exibir o conteúdo do documento junto com a assinatura digital e a trilha de auditoria, não selecione &quot;Anexar relatório de auditoria à representação assinada&quot; com &quot;Exibir representação do Acrobat Sign&quot; na interface do usuário do administrador para assinatura digital.
+
+Você pode baixar ou exibir a trilha de auditoria do Adobe como uma representação separada da representação assinada.
+
+![Imagem](images/audit-trail-rendition-setup-4.png)
 
 ### Etapa 9. Atualizar ações da Web {#web-actions}
 
