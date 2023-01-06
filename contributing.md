@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cb918e2d0d438d39a9f14f719c28b5981ff2656
+source-git-commit: 85743a2442808fa200a39d2e9bc27d4853dd2360
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -9,52 +9,39 @@ ht-degree: 0%
 
 Obrigado por escolher contribuir!
 
-A seguir está um conjunto de diretrizes a serem seguidas ao colaborar com este projeto.
+Veja a seguir um conjunto de diretrizes a serem seguidas ao colaborar com este projeto.
 
-## Código de Conduta
+## Código de conduta
 
-Este projeto segue o Adobe [código de conduta](code-of-conduct.md). Por participante,
-você deve manter este código. Informe um comportamento inaceitável para
+Este projeto adere ao Adobe [código de conduta](code-of-conduct.md). Ao participar, você deve manter esse código. Denuncie um comportamento inaceitável para
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
-## Documentação do Guia do colaborador
+## Documentação do guia do colaborador
 
-Consulte o [Guia do Colaborador](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consulte o [Guia do colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
-## Tem Uma Pergunta?
+## Tem alguma pergunta?
 
-Comece apresentando um problema. Os comitês existentes neste projeto trabalham para alcançar
-consenso em torno da direção do projeto e solução de problemas dentro de processos de problemas
-(se for caso disso).
+Comece apresentando um problema. Os atuais aprovadores deste projeto trabalham para chegar a um consenso sobre a direção do projeto e as soluções de problemas dentro dos threads de problemas (quando apropriado).
 
 ## Contrato de licença do colaborador
 
-Todas as contribuições de terceiros para este projeto devem ser acompanhadas por um colaborador assinado
-contrato de licença. Isso dá ao Adobe permissão para redistribuir suas contribuições
-como parte do projeto. [Assine nosso CLA](http://opensource.adobe.com/cla.html). Você
-só precisa enviar um Adobe CLA uma vez, portanto, se você já enviou um anteriormente,
-você é bom para ir!
+Todas as contribuições de terceiros para este projeto devem ser acompanhadas por um contrato de licença do colaborador assinado. Isso dá permissão de Adobe para redistribuir suas contribuições como parte do projeto. [Assine nosso CLA](http://opensource.adobe.com/cla.html). Você só precisa enviar um Adobe CLA uma vez, então se você já enviou um anteriormente, você está pronto para ir!
 
 ## Revisões de código
 
-Todas as candidaturas devem assumir a forma de pedidos de reembolso e ser revistas
-por comitês de projeto. Leia [a documentação de solicitação pull do GitHub](https://help.github.com/articles/about-pull-requests/)
-para obter mais informações sobre como enviar solicitações de pull.
+Todos os envios devem assumir a forma de solicitações de incorporação e devem ser revisados por aprovadores de projetos. Ler [Documentação de solicitação de incorporação do GitHub](https://help.github.com/articles/about-pull-requests/)
+para obter mais informações sobre como enviar solicitações de baixa automática.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
 submitting a pull request!
 -->
 
-## Do colaborador para o comutador
+## Do Colaborador ao Committer
 
-Adoramos contribuições de nossa comunidade! Se quiser ir um passo além do colaborador
-e tornar-se um compromisso com acesso total a gravação e participação no projeto, você deve
-ser convidados para o projeto. Os atuais comitês utilizam uma nomeação interna
-processo que deve alcançar o consenso preguiçoso (o silêncio é a aprovação) antes dos convites
-são emitidos. Se se sentir qualificado e quiser envolver-se mais profundamente,
-sinta-se à vontade para falar com os comitês existentes para conversar sobre isso.
+Adoramos contribuições de nossa comunidade! Se você quiser ir um passo além de ser colaborador e se tornar um aprovador com acesso total para escrever e participar do projeto, você deve ser convidado para o projeto. Os atuais aprovadores utilizam um processo de indicação interno que deve chegar a um consenso presumido (silêncio é aprovação) antes que os convites sejam emitidos. Se você se sentir qualificado e quiser se envolver mais profundamente, sinta-se à vontade para contatar os atuais aprovadores e conversar sobre isso.
 
 ## Problemas de segurança
 
-Problemas de segurança não devem ser relatados neste controlador de problemas. Em vez disso, [registre um problema para nossos especialistas em segurança](https://helpx.adobe.com/security/alertus.html)
+Problemas de segurança não devem ser relatados neste controlador de problemas. Em vez disso, [relate um problema para os nossos especialistas em segurança](https://helpx.adobe.com/security/alertus.html)
