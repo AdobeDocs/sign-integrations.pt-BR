@@ -5,7 +5,7 @@ role: Leader
 source-git-commit: 87818d90ab5e223d2d154f4449702e1c4c23473a
 workflow-type: tm+mt
 source-wordcount: '68'
-ht-degree: 25%
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 25%
    + [Guia de instalação](coupa/install.md)
 + Adobe Sign para Veeva Vault {#veeva}
    + [Guia de instalação](veeva/install.md)
-   + [Guia do Usuário](veeva/user.md)
+   + [Guia do usuário](veeva/user.md)
 + Adobe Sign para NetSuite {#netsuite}
    + [Notas de versão do Adobe Sign para NetSuite](netsuite/release-notes.md)
    + [Guia de instalação do Adobe Sign para NetSuite](netsuite/install.md)

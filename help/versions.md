@@ -11,7 +11,7 @@ exl-id: c1f22848-7951-4066-84d4-f8cf6c2f3a6f
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '530'
-ht-degree: 40%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ A convenção de controle de versão e o ciclo de vida do suporte do Adobe Sign 
 
 ## Números de versão
 
-A versão do pacote usa um sistema de numeração de três partes para identificar o número de compilação sequencial da versão disponibilizada e a importação relativa da atualização em termos de conteúdo novo ou com alteração.
+A versão do pacote usa um sistema de numeração de três partes para identificar o número de compilação sequencial da versão lançada e a importação relativa da atualização em termos de conteúdo novo ou em alteração.
 
 O número da versão segue este padrão: N.m.p.
 
@@ -49,11 +49,11 @@ Os administradores devem manter suas versões atualizadas para garantir que a co
 
 O ciclo de vida do suporte da versão de um produto de integração do Adobe Sign é definido com base na versão principal do pacote e indica o período de tempo em que o Adobe Sign está oferecendo suporte ativo à versão individual da integração.
 
-O Adobe Sign é compatível com a versão atual de um pacote e as duas versões principais anteriores (inclusive com todas as atualizações secundárias e de correções relacionadas). As versões principais são apresentadas da seguinte forma:
+O Adobe Sign é compatível com a versão atual de um pacote e as duas versões principais anteriores (inclusive com todas as atualizações secundárias e de correções relacionadas). As versões principais são expressas do seguinte modo:
 
-* Versão atual (N): a versão principal mais recente do pacote
-* Versão anterior (N-1): uma versão principal anterior à versão mais recente
-* Última versão compatível (N-2): duas versões principais anteriores à versão atual
+* Versão atual (N): A versão principal mais recente do pacote
+* Versão anterior (N-1): Uma versão principal anterior à versão mais recente
+* Última versão compatível (N-2): Duas versões principais anteriores à versão atual
 
 Por exemplo, se a versão atual disponível do pacote for 23.2.1, então:
 
@@ -66,14 +66,14 @@ Por exemplo, se a versão atual disponível do pacote for 23.2.1, então:
 
 ## Ciclo de vida do serviço de versão
 
-O ciclo de vida do serviço da versão define o escopo completo de quando o serviço é utilizável. A linha do tempo corresponde ao ciclo de vida do suporte da versão com a adição de um período de carência de 90, dias que permite aos clientes concluir a atualização.
+O ciclo de vida do serviço da versão define o escopo completo de quando o serviço é utilizável. A linha do tempo corresponde ao ciclo de vida do suporte da versão com a adição de um período de cortesia de 90 dias que permite aos clientes concluir a atualização.
 
-* Durante o período de carência de uma versão não compatível, o suporte é fornecido apenas para atualizar para uma versão mais recente, e não para manter uma versão não compatível
+* Durante o período de carência de uma versão sem suporte, o suporte é fornecido apenas para atualizar para uma versão mais recente, e não para manter uma versão sem suporte
 * Após o período de carência, a versão fica fora de serviço
 
-* O Adobe Sign não aceita solicitações de versões que estão fora de serviço
+* A Adobe Sign não aceitará solicitações de versões que estiverem fora de serviço
 * Depois que a integração for atualizada para a versão atual, as comunicações entre o Adobe Sign e a integração serão retomadas normalmente
 
-![Período de inatividade](images/shutdown_period.png)
+![Período de desligamento](images/shutdown_period.png)
 
-Entre em contato com o revendedor ou com o suporte ao cliente se tiver dúvidas.
+Entre em contato com seu revendedor ou com o suporte ao cliente se tiver dúvidas.

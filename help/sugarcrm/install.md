@@ -11,14 +11,14 @@ exl-id: 0512f616-568a-4b96-9bd1-48e67bc3536b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '2354'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
 # [!DNL SugarCRM] Guia de instalação {#sugarcrm-install-guide}
 
-[Entre em contato com o Atendimento ao cliente](https://adobe.com/go/adobesign-support-center_br)
+[Entre em contato com o Atendimento ao cliente](https://adobe.com/go/adobesign-support-center)
 
 Adobe [!DNL EchoSign] para [!DNL SugarCRM] é a principal solução de contratos online eSignature que proporciona automação de assinaturas eletrônicas em [!DNL SugarCRM] para assinaturas eletrônicas e por fax. Os usuários podem enviar contratos diretamente do SugarCRM, exibir o histórico de contratos e salvar contratos assinados eletronicamente com contas, contatos, cotações associados e muito mais.
 Adobe [!DNL EchoSign] para [!DNL SugarCRM] está disponível para todas as versões suportadas do SugarCRM, incluindo 6.3 - 6.7 para soluções sob demanda ou no local.

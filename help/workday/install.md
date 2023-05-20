@@ -1,6 +1,6 @@
 ---
 title: Guia de instalação do Workday
-description: Guia de instalação para habilitar a integração do Adobe Sign com Workday
+description: Guia de instalação para ativar a integração do Adobe Sign com o Workday
 uuid: 56478222-fe66-4fa5-aac3-0ecdf2863197
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
@@ -14,14 +14,14 @@ topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 26%
+source-wordcount: '1131'
+ht-degree: 0%
 
 ---
 
 # [!DNL Workday] Guia de instalação{#workday-installation-guide}
 
-[**Entrar em contato com o Suporte do Adobe Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o Suporte da Adobe Sign**](https://adobe.com/go/adobesign-support-center)
 
 ## Visão geral {#overview}
 
@@ -47,7 +47,7 @@ Para clientes que ainda não conhecem a Adobe Sign e não têm um logon preexist
 
 Você precisa seguir as instruções no email para inicializar sua conta e acessar seu Adobe Sign [!UICONTROL Início] página.
 
-![A página do painel do Adobe Sign](images/classic-home.png)
+![A página Painel do Adobe Sign](images/classic-home.png)
 
 ## Configurar o Adobe Sign para [!DNL Workday] {#config}
 
@@ -61,7 +61,7 @@ Para configurar o Adobe Sign para [!DNL Workday], você precisa gerar os seguint
 
 Para criar um usuário no Adobe Sign:
 
-1. Faça logon no Adobe Sign como administrador de conta.
+1. Faça logon no Adobe Sign como administrador da conta.
 1. Navegue até **[!UICONTROL Conta]** > **[!UICONTROL Usuários]**.
 1. Clique no botão ![imagem do ícone de adição](images/icon_plus.png) para criar um novo usuário.
 
@@ -70,9 +70,9 @@ Para criar um usuário no Adobe Sign:
 1. Na caixa de diálogo que é aberta, forneça os detalhes do novo usuário:
 
    * Forneça um email funcional que você possa acessar.
-   * Insira um valor adequado de Nome e Sobrenome.
+   * Informe um valor apropriado para Nome e Sobrenome.
    * Selecionar **[!UICONTROL Criar um novo grupo para este usuário]** do Grupo de usuários.
-   * Forneça o **[!UICONTROL Nome do novo grupo]** com um nome intuitivo como *[!DNL Workday]*.
+   * Forneça o **[!UICONTROL Nome do Novo Grupo]** com um nome intuitivo como *[!DNL Workday]*.
 
    ![O painel Criar um usuário](images/create-user.png)
 
@@ -86,8 +86,8 @@ Para verificar o endereço de email do usuário com o status &quot;Criado&quot;:
 
 1. Faça logon no email do novo usuário.
 2. Localize o email &quot;Bem-vindo ao Adobe Sign&quot;.
-3. Clique em **[!UICONTROL Clique aqui para definir a senha]**.
-4. Definir a senha.
+3. Clique onde diz **[!UICONTROL Clique aqui para definir sua senha]**.
+4. Defina a senha.
 
 Depois de verificar o endereço de email, o status do usuário muda de [!UICONTROL CRIADO] para [!UICONTROL ATIVO].
 
@@ -97,7 +97,7 @@ Depois de verificar o endereço de email, o status do usuário muda de [!UICONTR
 
 Para promover o novo usuário no [!DNL Workday] grupo:
 
-1. Vá até a página [!UICONTROL Usuários] (se já não estiver nela).
+1. Navegue até o [!UICONTROL Usuários] (se ainda não estiver lá).
 2. Clique duas vezes no usuário na caixa de diálogo [!DNL Workday] grupo.
 
    Isso abre um [!UICONTROL Editar] para as permissões de usuário.
@@ -119,7 +119,7 @@ Para estabelecer a relação de confiança:
 
 1. Fazer logon em [!DNL Workday] como administrador de conta.
 1. Abra o **[!UICONTROL Editar configuração de inquilino - Processos corporativos]** página.
-1. Localize a seção [!UICONTROL Configuração da assinatura eletrônica]:
+1. Localize o [!UICONTROL Configuração da assinatura eletrônica] seção:
 
    ![](images/esignature_configurations.png)
 
@@ -134,7 +134,7 @@ Para estabelecer a relação de confiança:
 >
 >Certifique-se de fazer logout completo de qualquer outra instância do Adobe Sign antes de continuar.
 
-Depois de conectado, a caixa de seleção Configuração da Adobe ativada é marcada, e você pode começar a usar o Adobe Sign com o [!DNL Workday].
+Depois de conectado, a caixa de seleção Configuração de Adobe ativada é marcada e você pode começar a usar o Adobe Sign com [!DNL Workday].
 
 ### Configurar a etapa de revisão de documento {#configure-review}
 
@@ -144,17 +144,17 @@ O documento da Etapa de Revisão de documento pode ser um dos seguintes:
 * Um documento gerado por uma etapa Gerar Documento dentro do mesmo processo de negócios
 * Um relatório formatado criado com o [!DNL Workday] Designer de Relatório
 
-Você pode adicionar qualquer um desses documentos com [Tags de texto Adobe](https://adobe.com/go/adobesign_text_tag_guide_br) para controlar a aparência e a posição dos componentes específicos do Adobe Signing. A fonte do documento deve ser especificada na definição do processo corporativo. Não é possível carregar um documento ad-hoc enquanto o processo corporativo está em execução.
+Você pode adicionar qualquer um desses documentos com [Tags de texto Adobe](https://adobe.com/go/adobesign_text_tag_guide) para controlar a aparência e a posição dos componentes específicos do Adobe Signing. A origem do documento deve ser especificada na definição do processo de negócios. Não é possível carregar um documento ad-hoc enquanto o processo de negócios está em execução.
 
-A capacidade de serializar grupos de signatários é exclusiva do uso do Adobe Sign com uma Etapa de revisão de documento. Isso permite que você especifique grupos com base em funções que assinam em sequência. O Adobe Sign não oferece suporte a grupos de assinatura paralelos.
+A capacidade de serializar grupos de signatários é exclusiva do uso do Adobe Sign com uma Etapa de revisão de documento. Isso permite especificar grupos baseados em função que assinam em sequência. O Adobe Sign não oferece suporte a grupos de assinatura paralelos.
 
-Para obter ajuda para configurar a Etapa Revisão do documento, consulte o [Guia de início rápido](https://adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}.
+Para obter ajuda para configurar a Etapa Revisão do documento, consulte o [Guia de início rápido](https://adobe.com//go/adobesign_workday_quick_start){target="_blank"}.
 
 ## Suporte {#support}
 
 ### [!DNL Workday] suporte {#workday-support}
 
-[!DNL Workday]O é o proprietário da integração e deve ser o seu primeiro ponto de contato em caso de dúvidas sobre o escopo da integração, solicitações de recursos ou problemas nas funções diárias da integração.
+[!DNL Workday] é o proprietário da integração e deve ser seu primeiro ponto de contato para perguntas sobre o escopo da integração, solicitações de recursos ou problemas na função diária da integração.
 
 Consulte o seguinte [!DNL Workday] artigos da comunidade sobre como solucionar problemas de integração e gerar documentos:
 
@@ -165,9 +165,9 @@ Consulte o seguinte [!DNL Workday] artigos da comunidade sobre como solucionar p
 
 ### Suporte ao Adobe Sign {#adobe-sign-support}
 
-O Adobe Sign é o parceiro da integração e deve ser contatado em caso de falha da integração ao obter assinaturas, ou em caso de falha de notificação de assinaturas pendentes.
+O Adobe Sign é o parceiro de integração e deve ser contatado se a integração não conseguir obter assinaturas ou se a notificação de assinaturas pendentes falhar.
 
-Os clientes do Adobe Sign devem entrar em contato com o Gerenciador de sucesso do cliente (CSM) para obter suporte. Como alternativa, o Suporte técnico da Adobe pode ser contatado por telefone: 1-866-318-4100. Aguarde a lista de produtos e digite: 4, em seguida, 2 (como solicitado).
+Os clientes da Adobe Sign devem entrar em contato com o Gerente de sucesso do cliente (CSM) para obter suporte. Como alternativa, o Suporte Técnico da Adobe pode ser contatado por telefone: 1-866-318-4100, aguarde a lista de produtos e digite: 4 e depois 2 (conforme solicitado).
 
 * [Adição de tags de texto Adobe a documentos](https://adobe.com/go/adobesign_text_tag_guide)
 * [Revisar a configuração do documento e exemplos](https://www.adobe.com//go/adobesign_workday_quick_start)

@@ -12,13 +12,13 @@ exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
 source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Adobe Acrobat Sign para [!DNL Veeva Vault]: Guia do usuário {#veeva-vault-user-guide}
 
-[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center)
 
 Este documento foi criado para ajudar [!DNL Veeva Vault] os clientes aprendem a usar o Adobe Acrobat Sign para [!DNL Veeva Vault] integração para enviar um contrato.
 
@@ -33,7 +33,7 @@ Integração do Adobe Acrobat Sign com [!DNL Veeva Vault] simplifica e agiliza o
 * Poupe tempo e recursos gastos em emails de caracol, envio noturno ou envio de fax.
 * Envie contratos para assinatura eletrônica ou aprovação de [!DNL Veeva Vault], acesse o histórico de contratos em tempo real e exiba contratos salvos.
 * Acompanhe os negócios em tempo real em toda a organização e receba atualizações quando os contratos forem exibidos, assinados, cancelados ou recusados.
-* eSign em mais de 20 idiomas e suporte ao serviço de retorno de fax em mais de 50 locais no mundo.
+* eSign em mais de 20 idiomas e suporte ao serviço de fax-back em mais de 50 locais no mundo todo.
 * Crie Modelos de contrato reutilizáveis para enviar opções.
 
 ## Enviar um contrato usando o Adobe Acrobat Sign para [!DNL Veeva Vault] {#send-sign-vault-agreement}
@@ -59,7 +59,7 @@ Para enviar um contrato usando o Adobe Acrobat Sign para Veeva:
 
 1. Para fechar a caixa de diálogo, selecione **[!UICONTROL OK]**.
 
-1. Selecione **[!UICONTROL Próximo]**.
+1. Selecionar **[!UICONTROL Próximo]**.
 
 1. Na janela exibida, preencha todos os campos obrigatórios na seção de metadados e selecione **[!UICONTROL Salvar]**.
 

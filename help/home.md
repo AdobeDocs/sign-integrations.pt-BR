@@ -11,7 +11,7 @@ exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 26%
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ Saiba como instalar, integrar e usar [!DNL Adobe Sign] soluções para os sistem
     <div>
     <a href="versions.md"><strong>Versões e ciclos de vida</strong></a>
     </div>
-    <em>Controle de versão e ciclo de vida do produto de integração do Adobe Sign.</em>
+    <em>Ciclo de vida e controle de versão do produto de integração do Adobe Sign.</em>
     <br>
   </td>
   <td>

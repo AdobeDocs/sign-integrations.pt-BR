@@ -9,7 +9,7 @@ exl-id: 6317723e-447a-4506-a621-4d967bdd6561
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '849'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -56,7 +56,7 @@ Agora, você verá os serviços eSign da Adobe Document Cloud (ou Adobe eSign Se
 
 **Segurança aprimorada implementada com OAuth**
 
-Para melhorar a segurança dos dados, os serviços eSign agora usam o OAuth 2.0 para autenticar sua conta de serviços eSign da Adobe Document Cloud dentro do NetSuite. Esse novo protocolo permite que o NetSuite se comunique com os serviços eSign sem solicitar sua senha para esses serviços. Já que informações confidenciais não está sendo compartilhadas diretamente entre os aplicativos, sua conta tem menos probabilidade de ficar comprometida. Essa melhoria não afeta sua implementação, mas você deve fazer uma configuração única para autorizar que seu pacote NetSuite se comunique com o Adobe Document Cloud. Isso é feito durante o processo de instalação. Para clientes que atualizam de uma versão anterior do pacote — v3.5.9 e anterior — a chave de API anteriormente usada é substituída por um token OAuth gerado durante o processo de autorização.
+Para melhorar a segurança dos dados, os serviços eSign agora usam o OAuth 2.0 para autenticar sua conta de serviços eSign da Adobe Document Cloud dentro do NetSuite. Esse novo protocolo permite que o NetSuite se comunique com os serviços eSign sem solicitar sua senha para esses serviços. Como informações confidenciais não estão sendo compartilhadas diretamente entre os aplicativos, sua conta tem menos probabilidade de ficar comprometida. Essa melhoria não afeta sua implementação, mas você deve fazer uma configuração única para autorizar que seu pacote NetSuite se comunique com o Adobe Document Cloud. Isso é feito durante o processo de instalação. Para clientes que atualizam de uma versão anterior do pacote — v3.5.9 e anterior — a chave de API anteriormente usada é substituída por um token OAuth gerado durante o processo de autorização.
 
 **Migração dos serviços eSign de APIs SOAP para APIs REST**
 
@@ -106,7 +106,7 @@ Enviar lembrete imediato ao signatário atual
 
 Você pode selecionar arquivos para anexar da transação atual com a nova lista suspensa &quot;Arquivos de transação&quot;.
 
-**Certificação do Adobe PDF para todos os documentos do EchoSign**
+**Certificação Adobe PDF para todos os documentos do EchoSign**
 
 * Todos os arquivos PDF enviados ou baixados do EchoSign são certificados com um certificado digital da Adobe EchoSign
 * O Acrobat ou o Reader exibe a certificação que garante que o documento não foi adulterado para proporcionar confiança e tranquilidade adicionais
@@ -116,14 +116,14 @@ Você pode selecionar arquivos para anexar da transação atual com a nova lista
 * Os remetentes podem coletar documentos de suporte adicionais dos signatários durante a assinatura, como CNH, certificado comercial e muito mais.
 * Os documentos coletados tornam-se parte do registro oficial do contrato assinado
 
-**Campos de dos condicionais**
+**Campos de dados condicionais**
 
 * Definir lógica condicional para campos de contrato
 * As condições podem ser baseadas em valores para um ou mais campos no contrato
 * As condições podem ser removidas por meio da interface do usuário de criação de formulários com a função arrastar e soltar ou por meio de tags de texto
 * Ao assinar um documento com base nas condições de!ned, o signatário verá os campos apropriados
 
-**Melhorias adicionais dos campos de formulário do EchoSign**
+**Melhorias adicionais nos campos de formulário do EchoSign**
 
 * Menus suspensos
 * Mascaramento de campo

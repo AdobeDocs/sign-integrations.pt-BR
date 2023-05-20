@@ -13,13 +13,13 @@ exl-id: 5d61a428-06e4-413b-868a-da296532c964
 source-git-commit: 76f1be575130e89d96dfe45f7343382b3a519903
 workflow-type: tm+mt
 source-wordcount: '4171'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
 # [!DNL Veeva Vault] Guia de instalação{#veeva-installation-guide}
 
-[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o Suporte da Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center)
 
 ## Visão geral {#overview}
 
@@ -79,7 +79,7 @@ O objeto de assinatura é criado para armazenar informações relacionadas ao co
 
 | Campo | Rótulo | Tipo | Descrição |
 |:---|:---|:---|:------- | 
-| external_id__c | ID do contrato | Sequência de caracteres (100) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
+| external_id__c | ID do Contrato | Sequência de caracteres (100) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | file_hash__c | Hash de Arquivo | Sequência de caracteres (50) | Contém a soma de verificação md5 do arquivo que foi enviado para o Adobe Acrobat Sign |
 | name__v | Nome | Sequência de caracteres (128) | Mantém o nome do contrato |
 | sender__c | Remetente | Objeto (Usuário) | Mantém a referência ao usuário do Vault que criou o contrato |
@@ -88,7 +88,7 @@ O objeto de assinatura é criado para armazenar informações relacionadas ao co
 | start_date__c | Data de início | DataHora | Data em que o contrato foi enviado para assinatura |
 | cancellation_date__c | Data de cancelamento | DataHora | Mantém a data em que o contrato foi cancelado. |
 | completed_date__c | Data de conclusão | DataHora | Mantém a data em que o contrato foi concluído. |
-| viewable_rendition_used__c | Reprodução Visível Usada | Boolean | Sinalizador que indica se a representação visível foi enviada para assinatura. (por padrão, é verdadeiro) |
+| viewable_rendition_used__c | Reprodução Visível Usada | Booleano | Sinalizador que indica se a representação visível foi enviada para assinatura. (por padrão, é verdadeiro) |
 | plugin_version__c | Versão do plug-in | Texto (10) | É usado para permitir o processamento apropriado de todos os contratos criados antes que uma nova versão 4.0 seja implantada. Observação: Depois que a versão 4.0 do aplicativo Web personalizado for implantada, esse campo será definido como 4.0 sempre que o registro de assinatura for criado. |
 | external_environment__c | Ambiente externo | Texto (20) | Mantém o nome do ambiente do Adobe Sign no qual o contrato foi criado. |
 
@@ -105,7 +105,7 @@ O objeto Signatário é criado para armazenar informações relacionadas aos par
 | email__c | Email | Sequência de caracteres (120) | Contém a ID de contrato exclusiva do Adobe Acrobat Sign |
 | external_id__c | ID do participante | Sequência de caracteres (80) | Contém o identificador exclusivo do participante do Adobe Acrobat Sign |
 | name__v | Nome | Sequência de caracteres (128) | Mantém o nome do participante da Adobe Acrobat Sign |
-| order__c | Ordem | Número | Contém o número do pedido do participante do contrato do Adobe Acrobat Sign |
+| order__c | Pedido | Número | Contém o número do pedido do participante do contrato do Adobe Acrobat Sign |
 | role__c | Função | Sequência de caracteres (30) | Mantém a função do participante do contrato do Adobe Acrobat Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
 | signature_status__c | Status da assinatura | Sequência de caracteres (100) | Mantém o status do participante do contrato do Adobe Acrobat Sign |
@@ -121,15 +121,15 @@ Campos de objeto do evento de assinatura
 
 | Campo | Rótulo | Tipo | Descrição |
 |:---|:---|:---|:-------- | 
-| acting_user_email__c | Email do usuário em ação | Sequência de caracteres | Contém o email do usuário do Adobe Acrobat Sign que executou a ação que gerou o evento |
-| acting_user_name__c | Nome de usuário ativo | Sequência de caracteres | Contém o nome do usuário do Adobe Acrobat Sign que executou a ação que gerou o evento |
-| descrição__c | Descrição | Sequência de caracteres | Contém a descrição do evento do Adobe Acrobat Sign |
-| event_date__c | Data do evento | DataHora | Mantém a data e a hora do evento do Adobe Acrobat Sign |
-| event_type__c | Tipo de evento | Sequência de caracteres | Contém o tipo de evento do Adobe Acrobat Sign |
-| name__v | Nome | Sequência de caracteres | Nome do evento gerado automaticamente |
-| participant_comment__c | Comentário do participante | Sequência de caracteres | Mantém o comentário do participante do Adobe Acrobat Sign, se houver |
-| participant_email__c | Email do participante | Sequência de caracteres | Contém o email do participante do Adobe Acrobat Sign |
-| participant_role__c | Função do participante | Sequência de caracteres | Mantém a função do participante do Adobe Acrobat Sign |
+| acting_user_email__c | E-mail do usuário ativo | String | Contém o email do usuário do Adobe Acrobat Sign que executou a ação que gerou o evento |
+| acting_user_name__c | Nome de usuário ativo | String | Contém o nome do usuário do Adobe Acrobat Sign que executou a ação que gerou o evento |
+| descrição__c | Descrição | String | Contém a descrição do evento do Adobe Acrobat Sign |
+| event_date__c | Data do Evento | DataHora | Mantém a data e a hora do evento do Adobe Acrobat Sign |
+| event_type__c | Tipo de evento | String | Contém o tipo de evento do Adobe Acrobat Sign |
+| name__v | Nome | String | Nome do evento gerado automaticamente |
+| participant_comment__c | Comentário do participante | String | Mantém o comentário do participante do Adobe Acrobat Sign, se houver |
+| participant_email__c | Email do participante | String | Contém o email do participante do Adobe Acrobat Sign |
+| participant_role__c | Função do participante | String | Mantém a função do participante do Adobe Acrobat Sign |
 | signature__c | Assinatura | Objeto (assinatura) | Mantém a referência ao registro pai da assinatura |
 | external_id__c | ID Externa | Texto (200) | Identificador de Evento do Contrato de Retenção gerado pelo Adobe Sign. |
 
@@ -152,7 +152,7 @@ Campos de Objeto de Log de Tarefas de Integração do Adobe Sign
 | Campo | Rótulo | Tipo | Descrição |
 |:--|:--|:--|:---------| 
 | start_date__c | Data de início | DataHora | Data de início da tarefa |
-| end_date__c | Data de término | DataHora | Data de Término da Tarefa |
+| end_date__c | Data final | DataHora | Data de Término da Tarefa |
 | task_status__c | Status da Tarefa | Lista de seleção | Armazena o status da tarefa: <br /> Concluído (task_completed__c) Concluído com Erros (task_completed_with_errors__c) Falha (task_failed__c) |
 | task_type__c | Tipo de Tarefa | Lista de seleção | Tipo de tarefa de retenção: <br><br> Sincronização de eventos dos contratos (agreements_events_synchronization__c) Processamento de eventos dos contratos (agreements_events_processing__c) |
 | messages__c | Mensagem | Longo (32000) | Retém a mensagem da tarefa |

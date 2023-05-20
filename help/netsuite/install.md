@@ -11,7 +11,7 @@ exl-id: 378cac01-87c9-4288-8839-482121d49402
 source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -72,7 +72,7 @@ Consulte [Criar um contrato do Adobe Sign](#createagreement) para obter mais inf
 
 O Adobe Sign usa o OAuth 2.0 para autenticar sua conta do Adobe Sign no [!DNL NetSuite].
 
-Este protocolo autoriza o [!DNL NetSuite] para se comunicar com a Adobe Sign sem solicitar sua senha. Já que informações confidenciais não está sendo compartilhadas diretamente entre os aplicativos, sua conta tem menos probabilidade de ficar comprometida.
+Este protocolo autoriza o [!DNL NetSuite] para se comunicar com a Adobe Sign sem solicitar sua senha. Como informações confidenciais não estão sendo compartilhadas diretamente entre os aplicativos, sua conta tem menos probabilidade de ficar comprometida.
 
 Essa autenticação não afeta sua implementação, mas você deve fazer uma configuração única após instalar ou atualizar o pacote em sua conta de produção ou sandbox.
 
@@ -84,7 +84,7 @@ O [!DNL NetSuite] o administrador que configura o OAuth também deve ter acesso 
 
 1. Na página Resultados da Pesquisa, selecione **Exibir** para *Configuração do Adobe Sign* registro.
 
-   ![Procure por Adobe Sign](images/search-for-adobesignconfig.png)
+   ![Pesquisar Adobe Sign](images/search-for-adobesignconfig.png)
 
 1. Na página Lista de configurações do Adobe Sign, selecione **[!UICONTROL Exibir]** para *Uso do OAuth para acessar APIs do Adobe Sign* registro.
 
@@ -92,7 +92,7 @@ O [!DNL NetSuite] o administrador que configura o OAuth também deve ter acesso 
 
 1. Na página Adobe Sign Config, selecione **[!UICONTROL Fazer Logon Com O Adobe Sign]**
 
-   ![Faça logon ](images/log-in-with-adobesign.png)
+   ![Login ](images/log-in-with-adobesign.png)
 
 1. Na página de logon do Adobe Sign exibida, insira suas credenciais e selecione **[!UICONTROL Fazer logon]**.
 
@@ -261,7 +261,7 @@ Se o contrato for criado a partir de um registro de Transação, o primeiro docu
 
 Em Preferências personalizadas, você também pode ativar o **[!UICONTROL Usar Trans. Entrar em contato como primeiro signatário]** se desejar que o contato principal da transação seja adicionado automaticamente como o primeiro signatário. Quando associado a um registro de Transação, exibe o **[!UICONTROL Contratos]** e o **[!UICONTROL Send for Signature]** botões.
 
-![Aspas](images/quote.png)
+![Cotação](images/quote.png)
 
 ## Registros de entidade {#entity-records}
 
@@ -456,7 +456,7 @@ Depois de instalar um novo pacote em uma conta de sandbox ou de produção, voc�
 1. No registro, selecione o **[!UICONTROL Contratos]** subguia.
 1. Selecionar **[!UICONTROL Novo Contrato]**.
 
-   ![Novo contrato](images/new-agreement.png)
+   ![Novo Contrato](images/new-agreement.png)
 
 1. No menu *[!UICONTROL Contrato do Adobe Sign]* , selecione **[!UICONTROL Editar]**.
 
@@ -647,4 +647,4 @@ Você também pode exibir os logs de execução de implantação para scripts qu
 
 ## Suporte {#support}
 
-Vá para a [Portal de suporte da Adobe Sign](https://adobe.com/go/adobesign-support-center_br) para acessar as perguntas frequentes, a documentação, os artigos da base de conhecimento ou entrar em contato com o Suporte da Adobe.
+Vá para a [Portal de suporte da Adobe Sign](https://adobe.com/go/adobesign-support-center) para acessar as perguntas frequentes, a documentação, os artigos da base de conhecimento ou entrar em contato com o Suporte da Adobe.

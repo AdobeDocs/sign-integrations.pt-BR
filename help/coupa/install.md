@@ -12,14 +12,14 @@ topic: Integrations
 exl-id: 12c91be5-afec-4918-a8fc-ceb33bedf98b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 7%
+source-wordcount: '819'
+ht-degree: 0%
 
 ---
 
 # [!DNL Coupa] Guia de instalação{#coupa-installation-guide}
 
-[**Entrar em contato com o Suporte do Adobe Sign**](https://adobe.com/go/adobesign-support-center_br)
+[**Entre em contato com o Suporte da Adobe Sign**](https://adobe.com/go/adobesign-support-center)
 
 ## Visão geral {#overview}
 
@@ -45,7 +45,7 @@ Para ter um uso dedicado do Adobe Sign para [!DNL Coupa] em uma organização, o
 
 Para criar um usuário no Adobe Sign:
 
-1. Faça logon no Adobe Sign como administrador de conta.
+1. Faça logon no Adobe Sign como administrador da conta.
 1. Navegue até **[!UICONTROL Conta]** > **[!UICONTROL Usuários]**.
 1. Para criar um novo usuário, clique no botão ![imagem do ícone de adição](images/icon_plus.png) ícone.
 1. Na caixa de diálogo que é aberta, forneça os detalhes do novo usuário:
@@ -71,8 +71,8 @@ Para criar um usuário no Adobe Sign:
 1. Para verificar o endereço de email:
    1. Faça logon no email do novo usuário.
    2. Localize o email &quot;Bem-vindo ao Adobe Sign&quot;. Verifique as pastas de spam/lixo eletrônico, se necessário.
-   3. Clique em **[!UICONTROL Clique aqui para definir a senha]**
-   4. Definir a senha.
+   3. Clique onde diz **[!UICONTROL Clique aqui para definir sua senha]**
+   4. Defina a senha.
 
    Depois de verificar o endereço de email, o status do usuário muda de [!UICONTROL CRIADO] para [!UICONTROL ATIVO].
 
@@ -84,7 +84,7 @@ Depois de criar um Grupo e um Usuário nesse grupo, você deve tornar o usuário
 
 Para promover o novo usuário no [!DNL Coupa BSM Suite] grupo:
 
-1. Vá até a página [!UICONTROL Usuários] (se já não estiver nela).
+1. Navegue até o [!UICONTROL Usuários] (se ainda não estiver lá).
 2. Clique duas vezes no usuário.
 
    Ela abre um [!UICONTROL Editar] para as permissões de usuário.
@@ -104,7 +104,7 @@ Para configurar o [!DNL Coupa BSM Suite]:
 1. Conecte seu [!DNL Coupa BSM Suite] instância para sua conta de serviço da Adobe Sign criada acima.
 1. Crie uma instância de webhook do Adobe Sign para notificar sua instância do Coupa BSM Suite sobre atualizações de contratos.
 
-Para obter mais detalhes sobre como conectar o [!DNL Coupa BSM Suite] e como criar e registrar o webhook, consulte [Documentação de suporte da instância do Adobe Sign Coupa BSM Suite](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target=&quot;_blank&quot;}.
+Para obter mais detalhes sobre como conectar o [!DNL Coupa BSM Suite] e como criar e registrar o webhook, consulte [Documentação de suporte da instância do Adobe Sign Coupa BSM Suite](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target="_blank"}.
 
 ## Criar [!DNL Webhook] no Adobe Sign {#create-webhook}
 
@@ -136,7 +136,7 @@ Para criar um webhook no Adobe Sign:
 
 [!DNL Coupa BSM Suite ] é o proprietário da integração e deve ser seu primeiro ponto de contato para perguntas sobre o escopo da integração, solicitações de recursos ou problemas na função diária da integração.
 
-Para quaisquer consultas, entre em contato com [Suporte ao Coupa](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target=&quot;_blank&quot;}.
+Para quaisquer consultas, entre em contato com [Suporte ao Coupa](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target="_blank"}.
 
 ### Suporte ao Adobe Sign {#adobe-sign-support}
 
